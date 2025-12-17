@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "home": "Laman utama",
+    "properties": "Senarai hartanah",
+    "projects": "Projek",
+    "agents": "Ejen",
+    "about": "Tentang kami",
+    "contact": "Hubungi",
+    "news": "Berita",
+    "events": "Acara",
+    "mm2h": "MM2H",
+    "education": "Pendidikan",
+    "faq": "Soalan lazim",
+    "onlineListing": "Senarai online",
+    "recruitmentAgent": "Pengambilan ejen",
+    "loginRegister": "Log masuk / Daftar",
+    "savedProperties": "Hartanah disimpan",
+    "transactedProperties": "Hartanah telah transaksi"
+  },
+  "meta": {
+    "homeTitle": "RegalProp | Hartanah Nilai Tinggi KLCC",
+    "homeDescription": "Fokus kepada hartanah bernilai tinggi sekitar KLCC / TRX / Pavilion untuk jual beli dan sewaan.",
+    "propertiesTitle": "Hartanah sekitar KLCC untuk jual & sewa | RegalProp",
+    "propertiesDescription": "Pilihan unit bernilai tinggi dalam lingkungan 3–5km dari KLCC / TRX / Pavilion untuk kediaman dan pelaburan.",
+    "agentsTitle": "Ejen hartanah & pakar Star Residences | RegalProp",
+    "agentsDescription": "Kenali pasukan kami yang fokus kepada Star Residences KLCC dan projek utama lain.",
+    "aboutTitle": "Tentang RegalProp | Agensi Fokus KLCC",
+    "aboutDescription": "RegalProp memberi tumpuan kepada hartanah bernilai tinggi di sekitar KLCC, TRX dan Pavilion.",
+    "contactTitle": "Hubungi RegalProp",
+    "contactDescription": "Berbincang dengan kami tentang pembelian, penjualan, sewaan dan operasi sekitar kawasan KLCC.",
+    "newsTitle": "Berita & kemas kini hartanah | RegalProp",
+    "newsDescription": "Kemas kini pasaran hartanah sekitar KLCC / TRX / Pavilion, pelancaran projek dan polisi yang berkaitan.",
+    "eventsTitle": "Acara & sesi taklimat | RegalProp",
+    "eventsDescription": "Perkongsian berkumpulan kecil, pratonton projek dan taklimat pelaburan sekitar KLCC.",
+    "mm2hTitle": "MM2H & perancangan tinggal lama | RegalProp",
+    "mm2hDescription": "Bagaimana hartanah sekitar KLCC / TRX / Pavilion boleh menyokong rancangan Malaysia My Second Home anda.",
+    "educationTitle": "Pendidikan & sekolah antarabangsa dekat KLCC | RegalProp",
+    "educationDescription": "Kluster sekolah popular dan opsyen hartanah sekitar KLCC, TRX, Pavilion dan Damansara Heights.",
+    "faqTitle": "Soalan lazim | RegalProp",
+    "faqDescription": "Soalan biasa daripada pemilik, pembeli dan penyewa tentang hartanah sekitar KLCC.",
+    "onlineListingTitle": "Senarai online & pendekatan pemasaran | RegalProp",
+    "onlineListingDescription": "Bagaimana kami membentangkan dan memposisikan unit anda di portal dan saluran sendiri.",
+    "recruitmentTitle": "Pengambilan ejen fokus KLCC | RegalProp",
+    "recruitmentDescription": "Bekerja dengan pasukan kecil yang benar-benar fokus kepada projek sekitar KLCC, TRX dan Pavilion.",
+    "authTitle": "Log masuk / daftar | RegalProp",
+    "authDescription": "Cipta akaun untuk menyimpan unit, menjejak viewing dan menerima kemas kini yang lebih tersasar.",
+    "savedTitle": "Hartanah disimpan | RegalProp",
+    "savedDescription": "Unit yang anda tandakan merentasi Star Residences KLCC, TRX, Pavilion dan projek utama lain.",
+    "transactedTitle": "Hartanah telah transaksi | RegalProp",
+    "transactedDescription": "Contoh transaksi lalu dalam kawasan fokus kami untuk membantu anda faham harga dan permintaan sebenar."
+  },
+  "footer": {
+    "tagline": "Fokus kepada hartanah bernilai tinggi dalam lingkungan 3–5km dari KLCC / TRX / Pavilion."
+  },
+  "home": {
+    "heroTitle": "Hartanah bernilai tinggi sekitar KLCC, dipilih khusus untuk pembeli & pelabur serius.",
+    "heroSubtitle": "Kami fokus kepada Star Residences KLCC dan projek mercu tanda sekitarnya dengan pengalaman jualan dan operasi sebenar.",
+    "viewListings": "Lihat senarai hartanah",
+    "meetTeam": "Kenali pasukan kami"
+  },
+  "properties": {
+    "title": "Senarai hartanah",
+    "subtitle": "Unit terpilih sekitar KLCC / TRX / Pavilion yang sesuai untuk kediaman sendiri, pelaburan dan kegunaan korporat.",
+    "disclaimer": "Harga ditunjukkan dalam MYR dengan penukaran kasar kepada USD & SGD hanya untuk rujukan."
+  },
+  "projects": {
+    "title": "Projek pelancaran baharu",
+    "subtitle": "Rumah landed, kondominium, lot komersial dan kilang industri sekitar KLCC / TRX / Pavilion.",
+    "inCharge": "Pegawai in-charge",
+    "team": "Ahli pasukan projek",
+    "relatedUnits": "Unit terpilih dalam projek ini",
+    "statusLabel": "Status pelancaran",
+    "phaseLabel": "Fasa",
+    "completionLabel": "Jangka siap",
+    "types": {
+      "landed": "Rumah landed",
+      "condo": "Kondominium / serviced residence",
+      "commercial": "Lot komersial",
+      "factory": "Perindustrian / kilang"
+    }
+  },
+  "about": {
+    "title": "Tentang RegalProp",
+    "p1": "RegalProp ialah pasukan penasihat dan operasi hartanah berskala kecil yang berpangkalan di Kuala Lumpur, dengan fokus kepada hartanah bernilai tinggi dalam lingkungan 3–5km dari KLCC, TRX dan Pavilion.",
+    "p2": "Selain jual beli biasa, kami juga mengurus unit hospitaliti, sewaan dan perancangan pegangan jangka panjang untuk pemilik serta pelabur.",
+    "highlights": [
+      {
+        "title": "Fokus kawasan KLCC",
+        "text": "Tumpuan mendalam kepada Star Residences KLCC, Star Suites KLCC dan projek mercu tanda bersebelahan."
+      },
+      {
+        "title": "Daripada jualan ke operasi",
+        "text": "Terlibat daripada pelancaran projek, jualan subsale, sehinggalah operasi sewaan harian dan penyelenggaraan unit."
+      },
+      {
+        "title": "Cara fikir pelabur",
+        "text": "Mengambil kira kuasa pegangan, hasil sewaan, strategi keluar dan permintaan sebenar, bukan sekadar brosur."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Hubungi kami",
+    "subtitle": "Kongsikan dengan kami bajet, tujuan dan jangka masa anda. Kami akan cadangkan beberapa pilihan konkrit berbanding hantar broadcast generik.",
+    "form": {
+      "name": "Nama",
+      "phone": "Telefon / WhatsApp",
+      "email": "Emel",
+      "message": "Bagaimana kami boleh bantu?",
+      "submit": "Hantar mesej",
+      "success": "Terima kasih. Pasukan kami akan hubungi anda secepat mungkin."
+    },
+    "officeTitle": "Alamat pejabat & surat-menyurat",
+    "officeAddress": "Kawasan Kuala Lumpur City Centre (KLCC). Alamat penuh boleh dikemaskini sebelum live.",
+    "phoneLabel": "Telefon",
+    "whatsappTitle": "Lebih selesa WhatsApp?",
+    "whatsappDesc": "Klik butang di bawah untuk buka WhatsApp dengan pasukan barisan hadapan kami. Anda boleh hantar teks, voice note atau link hartanah untuk kami semak."
+  },
+  "news": {
+    "title": "Berita pasaran & pandangan",
+    "subtitle": "Ringkasan perkembangan pasaran hartanah sekitar KLCC, TRX, Pavilion dan Lembah Klang yang relevan untuk pembeli dan pelabur serius.",
+    "comingSoon": "Artikel dan kemas kini sedang disediakan. Sila kembali semula tidak lama lagi."
+  },
+  "events": {
+    "title": "Acara & sesi taklimat",
+    "subtitle": "Sesi perkongsian berkumpulan kecil, pratonton projek dan taklimat pelaburan yang dianjurkan oleh RegalProp dan rakan kongsi.",
+    "comingSoon": "Acara yang akan datang akan diumumkan di sini. Hubungi kami jika anda ingin mengatur sesi tertutup."
+  },
+  "mm2h": {
+    "title": "MM2H & perancangan tinggal lama",
+    "subtitle": "Gambaran bagaimana hartanah bernilai tinggi di kawasan KLCC boleh menyokong rancangan Malaysia My Second Home (MM2H) atau tinggal lama anda.",
+    "sections": {
+      "overviewTitle": "Peranan hartanah dalam MM2H",
+      "overviewBody": "Ramai pemohon MM2H tertanya-tanya di mana patut tinggal, berapa banyak patut diperuntukkan untuk hartanah dan bagaimana pelan keluar. Kami fokus kepada projek sekitar KLCC, TRX dan Pavilion yang selari dengan keperluan ini.",
+      "consultTitle": "Berbincang dengan kami sebelum komited",
+      "consultBody": "Sebelum beli sebarang projek secara terburu-buru, biar kami tunjukkan angka sebenar dari segi sewaan, kos pegangan dan permintaan jualan semula."
+    }
+  },
+  "education": {
+    "title": "Pendidikan & sekolah antarabangsa",
+    "subtitle": "Kluster sekolah popular dan bagaimana ia berkaitan dengan KLCC, TRX, Pavilion, Damansara Heights dan kawasan utama lain.",
+    "comingSoon": "Kami sedang memetakan kawasan tangkapan sekolah kepada bangunan tertentu. Kongsikan umur dan silibus anak anda dan kami boleh cadangkan beberapa lokasi realistik."
+  },
+  "faq": {
+    "title": "Soalan lazim",
+    "subtitle": "Jawapan jujur berdasarkan transaksi sebenar dan operasi harian sekitar hartanah kawasan KLCC.",
+    "itemsIntro": "Berikut ialah beberapa soalan biasa daripada pembeli dan tuan tanah. Untuk sebarang perkara yang lebih terperinci, sila WhatsApp pasukan kami."
+  },
+  "onlineListing": {
+    "title": "Senarai online & pemasaran",
+    "subtitle": "Bagaimana kami memposisikan unit anda merentasi portal utama dan saluran sendiri untuk tarik profil penyewa dan pembeli yang betul.",
+    "comingSoon": "Bahagian ini akan menunjukkan contoh senarai sebenar, foto dan gaya penulisan yang digunakan oleh pasukan kami."
+  },
+  "recruitment": {
+    "title": "Pengambilan – ejen & rakan kongsi",
+    "subtitle": "Kami bekerja dengan bilangan ejen yang kecil yang serius tentang kawasan KLCC dan sanggup mendalami beberapa projek sahaja.",
+    "joinTitle": "Siapa yang kami cari",
+    "joinPoints": [
+      "Ejen yang sanggup mengkhusus dalam beberapa bangunan sahaja dan bukannya di mana-mana.",
+      "Orang yang selesa dengan kerja lapangan: viewing, pengendalian kunci, pemeriksaan unit.",
+      "Mereka yang ingin belajar operasi gaya hospitaliti untuk unit terpilih."
+    ],
+    "ctaText": "Jika anda rasa selaras dengan ini, hantarkan profil anda atau WhatsApp kami untuk perbincangan."
+  },
+  "auth": {
+    "title": "Log masuk / daftar",
+    "subtitle": "Cipta akaun untuk menyenarai pendek unit, jejak viewing dan terima kemas kini yang lebih tersasar berbanding broadcast massal.",
+    "loginTitle": "Pengguna sedia ada",
+    "registerTitle": "Pengguna baharu",
+    "loginButton": "Log masuk",
+    "registerButton": "Cipta akaun"
+  },
+  "saved": {
+    "title": "Hartanah disimpan",
+    "subtitle": "Unit yang anda tandakan merentasi Star Residences KLCC, TRX, Pavilion dan projek utama lain.",
+    "empty": "Anda belum menyimpan sebarang unit lagi. Layari senarai dan ketik ikon simpan untuk menyimpannya di sini."
+  },
+  "transacted": {
+    "title": "Hartanah telah transaksi",
+    "subtitle": "Contoh transaksi lalu dalam kawasan fokus kami untuk memberi anda gambaran harga dan permintaan yang realistik.",
+    "disclaimer": "Atas sebab privasi, kami hanya tunjuk butiran separa secara online. Hubungi kami jika anda mahu perbincangan lebih terperinci tentang bangunan tertentu."
+  }
+}
