@@ -13,9 +13,9 @@ export { Select as default };
 export const SelectGroup = ({ children }: { children: ReactNode }) => children;
 export const SelectValue = ({ children }: { children: ReactNode }) => children;
 export const SelectTrigger = ({ children }: { children: ReactNode }) =>
-  children;
+	children;
 export const SelectContent = ({ children }: { children: ReactNode }) =>
-  children;
+	children;
 export const SelectLabel = ({ children }: { children: ReactNode }) => children;
 export const SelectItem = ({ children }: { children: ReactNode }) => children;
 export const SelectSeparator = () => null;
