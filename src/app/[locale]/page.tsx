@@ -1,285 +1,112 @@
 "use client";
 
 import {
-	Anchor,
-	Badge,
-	Box,
-	Button,
-	Card,
-	Container,
-	Grid,
-	Group,
-	Select,
-	Stack,
-	Tabs,
-	Text,
-	TextInput,
-	Title,
+  Anchor,
+  Badge,
+  Box,
+  Button,
+  Card,
+  Container,
+  Grid,
+  Group,
+  Select,
+  Stack,
+  Tabs,
+  Text,
+  TextInput,
+  Title,
 } from "@mantine/core";
 import {
-	Award,
-	Building2,
-	DollarSign,
-	Home,
-	MapPin,
-	Search,
-	TrendingUp,
-	Users,
+  Award,
+  Building2,
+  DollarSign,
+  Home,
+  MapPin,
+  Search,
+  TrendingUp,
+  Users,
 } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
-
-type Props = {
-	params: Promise<{ locale: string }>;
-};
-
-// export async function generateMetadata({ params }: Props) {
-//   const { locale } = await params;
-//   const t = await getTranslations({ locale, namespace: "meta" });
-//   return {
-//     title: t("homeTitle"),
-//     description: t("homeDescription"),
-//     openGraph: {
-//       title: t("homeTitle"),
-//       description: t("homeDescription"),
-//       type: "website",
-//     },
-//   };
-// }
+import HeroSection from "@/components/home/HeroSection";
+import Image from "next/image";
+import NewLaunchSection from "@/components/home/NewLaunchSection";
+import HotPickSection from "@/components/home/HotPickSection";
 
 export default function HomePage() {
-	const t = useTranslations();
+  const t = useTranslations();
 
-	const features = [
-		{
-			icon: Building2,
-			title: "Premium Properties",
-			description: "KLCC / TRX / Pavilion high-value properties",
-		},
-		{
-			icon: TrendingUp,
-			title: "Market Insights",
-			description: "Real-time market data and trends",
-		},
-		{
-			icon: Users,
-			title: "Expert Agents",
-			description: "Specialist team with local knowledge",
-		},
-		{
-			icon: Award,
-			title: "Trusted Service",
-			description: "End-to-end property solutions",
-		},
-	];
+  const features = [
+    {
+      icon: Building2,
+      title: "Premium Properties",
+      description: "KLCC / TRX / Pavilion high-value properties",
+    },
+    {
+      icon: TrendingUp,
+      title: "Market Insights",
+      description: "Real-time market data and trends",
+    },
+    {
+      icon: Users,
+      title: "Expert Agents",
+      description: "Specialist team with local knowledge",
+    },
+    {
+      icon: Award,
+      title: "Trusted Service",
+      description: "End-to-end property solutions",
+    },
+  ];
 
-	const quickLinks = [
-		{ label: t("nav.properties"), href: `/properties`, icon: Home },
-		{ label: t("nav.projects"), href: `/projects`, icon: Building2 },
-		{ label: t("nav.agents"), href: `/agents`, icon: Users },
-		{
-			label: t("nav.transactedProperties"),
-			href: `/transacted-properties`,
-			icon: DollarSign,
-		},
-	];
+  const quickLinks = [
+    { label: t("nav.properties"), href: `/properties`, icon: Home },
+    { label: t("nav.projects"), href: `/projects`, icon: Building2 },
+    { label: t("nav.agents"), href: `/agents`, icon: Users },
+    {
+      label: t("nav.transactedProperties"),
+      href: `/transacted-properties`,
+      icon: DollarSign,
+    },
+  ];
 
-	return (
-		<Box>
-			{/* Hero Section with Search */}
-			<Box
-				style={{
-					background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-					minHeight: "500px",
-					position: "relative",
-					overflow: "hidden",
-				}}
-			>
-				<Container size="xl" py={80}>
-					<Stack
-						gap="xl"
-						align="center"
-						style={{ position: "relative", zIndex: 1 }}
-					>
-						<Badge size="lg" variant="light" color="white" radius="sm">
-							KLCC Property Specialist
-						</Badge>
+  return (
+    <Box>
+      {/* Hero Section with Search */}
+      <Box
+        style={{
+          // background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+          background: "#a0a0a0",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <Container size="xl" py="md">
+          <HeroSection />
+        </Container>
+      </Box>
 
-						<Title
-							order={1}
-							size="3rem"
-							fw={700}
-							ta="center"
-							c="white"
-							style={{ lineHeight: 1.2, maxWidth: 800 }}
-						>
-							{t("home.heroTitle")}
-						</Title>
+      <Container size="xl" py="md">
+        <div className="flex items-center justify-center">
+          <Image
+            src="/hero_banner.jpg"
+            alt="Hero Banner"
+            width={1000}
+            height={400}
+          />
+        </div>
+      </Container>
 
-						<Text size="xl" c="white" ta="center" maw={700} opacity={0.95}>
-							{t("home.heroSubtitle")}
-						</Text>
+      <Container size="xl" py="md">
+        <NewLaunchSection />
+      </Container>
 
-						{/* Property Search Card */}
-						<Card
-							shadow="xl"
-							radius="lg"
-							p="xl"
-							w="100%"
-							maw={900}
-							mt="xl"
-							style={{ background: "rgba(255, 255, 255, 0.98)" }}
-						>
-							<Tabs defaultValue="buy" variant="pills">
-								<Tabs.List mb="lg" style={{ justifyContent: "center" }}>
-									<Tabs.Tab value="buy">Buy</Tabs.Tab>
-									<Tabs.Tab value="rent">Rent</Tabs.Tab>
-									<Tabs.Tab value="new">New Projects</Tabs.Tab>
-									<Tabs.Tab value="transacted">Transacted</Tabs.Tab>
-								</Tabs.List>
+      <Container size="xl" py="md">
+        <HotPickSection />
+      </Container>
 
-								<Tabs.Panel value="buy">
-									<Stack gap="md">
-										<Grid>
-											<Grid.Col span={{ base: 12, sm: 6 }}>
-												<TextInput
-													placeholder="Location, Project or Street"
-													size="lg"
-													leftSection={<MapPin size={18} />}
-												/>
-											</Grid.Col>
-											<Grid.Col span={{ base: 12, sm: 3 }}>
-												<Select
-													placeholder="Property Type"
-													size="lg"
-													data={[
-														"All Types",
-														"Condominium",
-														"Apartment",
-														"Penthouse",
-														"Townhouse",
-													]}
-													defaultValue="All Types"
-												/>
-											</Grid.Col>
-											<Grid.Col span={{ base: 12, sm: 3 }}>
-												<Select
-													placeholder="Price Range"
-													size="lg"
-													data={[
-														"Any Price",
-														"< RM 500k",
-														"RM 500k - 1M",
-														"RM 1M - 2M",
-														"> RM 2M",
-													]}
-													defaultValue="Any Price"
-												/>
-											</Grid.Col>
-										</Grid>
-										<Button
-											size="lg"
-											fullWidth
-											leftSection={<Search size={18} />}
-											component={Link}
-											href={`/properties`}
-										>
-											Search Properties
-										</Button>
-									</Stack>
-								</Tabs.Panel>
-
-								<Tabs.Panel value="rent">
-									<Stack gap="md">
-										<Grid>
-											<Grid.Col span={{ base: 12, sm: 6 }}>
-												<TextInput
-													placeholder="Location, Project or Street"
-													size="lg"
-													leftSection={<MapPin size={18} />}
-												/>
-											</Grid.Col>
-											<Grid.Col span={{ base: 12, sm: 3 }}>
-												<Select
-													placeholder="Bedrooms"
-													size="lg"
-													data={["Any", "Studio", "1", "2", "3", "4+"]}
-													defaultValue="Any"
-												/>
-											</Grid.Col>
-											<Grid.Col span={{ base: 12, sm: 3 }}>
-												<Select
-													placeholder="Budget"
-													size="lg"
-													data={[
-														"Any",
-														"< RM 2k",
-														"RM 2k - 5k",
-														"RM 5k - 10k",
-														"> RM 10k",
-													]}
-													defaultValue="Any"
-												/>
-											</Grid.Col>
-										</Grid>
-										<Button
-											size="lg"
-											fullWidth
-											leftSection={<Search size={18} />}
-											component={Link}
-											href={`/properties`}
-										>
-											Search Rentals
-										</Button>
-									</Stack>
-								</Tabs.Panel>
-
-								<Tabs.Panel value="new">
-									<Stack gap="md">
-										<TextInput
-											placeholder="Search new projects..."
-											size="lg"
-											leftSection={<Building2 size={18} />}
-										/>
-										<Button
-											size="lg"
-											fullWidth
-											leftSection={<Search size={18} />}
-											component={Link}
-											href={`/projects`}
-										>
-											Browse New Projects
-										</Button>
-									</Stack>
-								</Tabs.Panel>
-
-								<Tabs.Panel value="transacted">
-									<Stack gap="md">
-										<TextInput
-											placeholder="Search transacted properties..."
-											size="lg"
-											leftSection={<DollarSign size={18} />}
-										/>
-										<Button
-											size="lg"
-											fullWidth
-											leftSection={<Search size={18} />}
-											component={Link}
-											href={`/transacted-properties`}
-										>
-											View Transactions
-										</Button>
-									</Stack>
-								</Tabs.Panel>
-							</Tabs>
-						</Card>
-					</Stack>
-				</Container>
-			</Box>
-
-			{/* Quick Links Section */}
-			<Container size="xl" py={60}>
+      {/* Quick Links Section */}
+      {/* <Container size="xl" py={60}>
 				<Grid>
 					{quickLinks.map((link) => {
 						const Icon = link.icon;
@@ -330,10 +157,10 @@ export default function HomePage() {
 						);
 					})}
 				</Grid>
-			</Container>
+			</Container> */}
 
-			{/* Features Section */}
-			<Box bg="gray.0" py={60}>
+      {/* Features Section */}
+      {/* <Box bg="gray.0" py={60}>
 				<Container size="xl">
 					<Stack gap="xl">
 						<Stack gap="sm" align="center">
@@ -381,10 +208,10 @@ export default function HomePage() {
 						</Grid>
 					</Stack>
 				</Container>
-			</Box>
+			</Box> */}
 
-			{/* CTA Section */}
-			<Container size="xl" py={80}>
+      {/* CTA Section */}
+      {/* <Container size="xl" py={80}>
 				<Card
 					shadow="xl"
 					radius="lg"
@@ -424,7 +251,7 @@ export default function HomePage() {
 						</Group>
 					</Stack>
 				</Card>
-			</Container>
-		</Box>
-	);
+			</Container> */}
+    </Box>
+  );
 }

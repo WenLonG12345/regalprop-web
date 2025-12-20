@@ -6,28 +6,38 @@ import {
 import { ModalsProvider } from "@mantine/modals";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { modals } from "@/components/modal";
 import JsonLd from "@/components/seo/JsonLd";
 import { routing } from "@/i18n/routing";
 import { buildSiteSchemas } from "@/lib/seo";
 
-import "../globals.css";
-import "@mantine/core/styles.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { theme } from "@/lib/theme";
 
-export const metadata = {
-  title: "RegalProp | KLCC High Value Properties",
-  description:
-    "KLCC / TRX / Pavilion high value properties for sale and rent. Star Residences KLCC specialist.",
-};
+import "../globals.css";
+import "@mantine/core/styles.css";
+import "@mantine/carousel/styles.css";
 
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return {
+    title: t("homeTitle"),
+    description: t("homeDescription"),
+    openGraph: {
+      title: t("homeTitle"),
+      description: t("homeDescription"),
+      type: "website",
+    },
+  };
+}
 
 export default async function LocaleRootLayout({ children, params }: Props) {
   const { locale } = await params;

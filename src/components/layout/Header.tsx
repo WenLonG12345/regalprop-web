@@ -154,13 +154,20 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       if (typeof window === "undefined") return;
-      setIsScrolled(window.scrollY > 200);
+      const scrollY = window.scrollY;
+
+      // Add hysteresis: different thresholds for scrolling down vs up
+      if (scrollY > 200 && !isScrolled) {
+        setIsScrolled(true);
+      } else if (scrollY < 150 && isScrolled) {
+        setIsScrolled(false);
+      }
     };
 
     handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isScrolled]);
 
   return (
     <>
@@ -244,7 +251,6 @@ export default function Header() {
               </Stack>
             )}
 
-            {/* Right: Mobile menu button */}
             <ActionIcon
               onClick={openDrawer}
               variant="subtle"
@@ -258,7 +264,7 @@ export default function Header() {
           </Flex>
         </Container>
         {!isScrolled && (
-          <div className="bg-[#333333]">
+          <Box bg="#333333" visibleFrom="lg">
             <Container size="xl" px="md">
               <Group gap="lg" py="sm">
                 {NAV_MENU_ITEMS.map((item) => (
@@ -282,7 +288,7 @@ export default function Header() {
                 ))}
               </Group>
             </Container>
-          </div>
+          </Box>
         )}
       </Box>
 
