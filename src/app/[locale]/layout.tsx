@@ -1,9 +1,14 @@
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import {
+	ColorSchemeScript,
+	Container,
+	MantineProvider,
+	mantineHtmlProps,
+} from "@mantine/core";
+import { ModalsProvider } from "@mantine/modals";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { CurrencyProvider } from "@/components/common/CurrencyContext";
-import { UnitMeasurementProvider } from "@/components/common/UnitMeasurementContext";
+import { modals } from "@/components/modal";
 import JsonLd from "@/components/seo/JsonLd";
 import { routing } from "@/i18n/routing";
 import { buildSiteSchemas } from "@/lib/seo";
@@ -12,6 +17,7 @@ import "../globals.css";
 import "@mantine/core/styles.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import { theme } from "@/lib/theme";
 
 export const metadata = {
 	title: "RegalProp | KLCC High Value Properties",
@@ -32,30 +38,29 @@ export default async function LocaleRootLayout({ children, params }: Props) {
 
 	const messages = await getMessages();
 
-	// Enable static rendering
 	setRequestLocale(locale);
 
 	const siteSchemas = buildSiteSchemas();
 
 	return (
-		<html lang={locale}>
+		<html lang={locale} {...mantineHtmlProps}>
 			<head>
 				<ColorSchemeScript />
 			</head>
 			<body>
 				<JsonLd data={siteSchemas} />
 
-				<MantineProvider>
-					<CurrencyProvider>
-						<UnitMeasurementProvider>
-							<NextIntlClientProvider messages={messages}>
-								<Header />
+				<NextIntlClientProvider messages={messages}>
+					<MantineProvider theme={theme}>
+						<ModalsProvider modals={modals}>
+							<Header />
+							<Container size="xl" p="md">
 								{children}
-								<Footer />
-							</NextIntlClientProvider>
-						</UnitMeasurementProvider>
-					</CurrencyProvider>
-				</MantineProvider>
+							</Container>
+							<Footer />
+						</ModalsProvider>
+					</MantineProvider>
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/suspicious/noShadowRestrictedNames: <explanation> */
+/** biome-ignore-all lint/suspicious/noShadowRestrictedNames: no error */
 "use client";
 
 import Error from "next/error";

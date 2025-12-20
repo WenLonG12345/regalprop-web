@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props) {
 
 	return {
 		title: `${t("projectsTitle")}`,
-		description:t("projectsDescription"),
+		description: t("projectsDescription"),
 	};
 }
 
@@ -98,13 +98,9 @@ export default async function ProjectDetailsPage({ params }: Props) {
 			</Link>
 
 			<section className="bg-white rounded-xl shadow-sm p-6 space-y-4 text-sm">
-				<div className="text-xs text-primary font-semibold">
-					Label
-				</div>
+				<div className="text-xs text-primary font-semibold">Label</div>
 				<h1 className="text-xl font-semibold text-slate-900">name</h1>
-				<div className="text-xs text-slate-500">
-					location
-				</div>
+				<div className="text-xs text-slate-500">location</div>
 				<p className="text-slate-700 leading-relaxed">summary</p>
 
 				<div className="grid md:grid-cols-3 gap-3 text-xs text-slate-700 pt-2">

@@ -1,12 +1,25 @@
-export const SUPPORTED_CURRENCIES = ["MYR", "USD", "SGD", "CNY"] as const;
+export const SUPPORTED_CURRENCIES = [
+	"MYR",
+	"USD",
+	"SGD",
+	"CNY",
+	"HKD",
+] as const;
 export type Currency = (typeof SUPPORTED_CURRENCIES)[number];
 export const DEFAULT_CURRENCY: Currency = "MYR";
+
+export const currencyOptions = [
+	{ code: "MYR" as Currency, label: "MYR (RM)" },
+	{ code: "USD" as Currency, label: "USD ($)" },
+	{ code: "SGD" as Currency, label: "SGD ($)" },
+];
 
 const RATES: Record<Currency, number> = {
 	MYR: 1,
 	USD: 0.24,
 	SGD: 0.31,
 	CNY: 1.72,
+	HKD: 1.84,
 };
 
 function formatAmount(value: number, currency: Currency): string {

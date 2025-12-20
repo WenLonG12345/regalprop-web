@@ -69,9 +69,7 @@ export default async function ProjectsPage({ params }: Props) {
 								{getTypeLabel(p.category)}
 							</div>
 							<h2 className="font-semibold text-slate-900">name</h2>
-							<div className="text-xs text-slate-500">
-								Location
-							</div>
+							<div className="text-xs text-slate-500">Location</div>
 							<p className="text-xs text-slate-600 line-clamp-3">summary</p>
 							<div className="mt-2">
 								<Link

@@ -1,180 +1,180 @@
 {
 	"nav": {
-		"home": "Home",
-		"properties": "Properties",
-		"projects": "Projects",
-		"agents": "Agents",
-		"about": "About us",
-		"contact": "Contact",
-		"news": "News",
-		"events": "Events",
-		"mm2h": "MM2H",
-		"education": "Education",
-		"faq": "FAQ",
-		"onlineListing": "Online listing",
-		"recruitmentAgent": "Recruitment",
-		"loginRegister": "Login / Register",
-		"savedProperties": "Saved properties",
-		"transactedProperties": "Transacted properties"
+		"home": "首頁",
+		"properties": "物業搜尋",
+		"projects": "新盤項目",
+		"agents": "地產經紀",
+		"about": "關於我們",
+		"contact": "聯絡我們",
+		"news": "市場資訊",
+		"events": "活動消息",
+		"mm2h": "第二家園 (MM2H)",
+		"education": "教育資訊",
+		"faq": "常見問題",
+		"onlineListing": "網上放盤",
+		"recruitmentAgent": "人才招聘",
+		"loginRegister": "登入 / 註冊",
+		"savedProperties": "我的收藏",
+		"transactedProperties": "成交紀錄"
 	},
 	"meta": {
-		"homeTitle": "RegalProp | KLCC High Value Properties",
-		"homeDescription": "KLCC / TRX / Pavilion high value properties for sale and rent. Star Residences KLCC specialist.",
-		"propertiesTitle": "KLCC Properties for sale & rent | RegalProp",
-		"propertiesDescription": "Curated high-value properties within 3–5km of KLCC / TRX / Pavilion for both own stay and investment.",
-		"agentsTitle": "Real estate agents & Star Residences specialists | RegalProp",
-		"agentsDescription": "Meet our dedicated team specialising in Star Residences KLCC and other prime projects.",
-		"aboutTitle": "About RegalProp | KLCC Specialist Agency",
-		"aboutDescription": "RegalProp focuses on high-value properties around KLCC, TRX and Pavilion with end-to-end services.",
-		"contactTitle": "Contact RegalProp",
-		"contactDescription": "Talk to our team for KLCC area property buying, selling, renting and hospitality operations.",
-		"newsTitle": "Property news & updates | RegalProp",
-		"newsDescription": "Updates on KLCC / TRX / Pavilion area property market, launches and policies.",
-		"eventsTitle": "Events & briefings | RegalProp",
-		"eventsDescription": "Small-group sharing, previews and briefings for KLCC area projects hosted by RegalProp.",
-		"mm2hTitle": "MM2H & long-stay property planning | RegalProp",
-		"mm2hDescription": "How KLCC / TRX / Pavilion area properties can support your Malaysia My Second Home or long-stay plan.",
-		"educationTitle": "Education & international schools near KLCC | RegalProp",
-		"educationDescription": "School clusters and property options around KLCC, TRX, Pavilion and Damansara Heights.",
-		"faqTitle": "Frequently asked questions | RegalProp",
-		"faqDescription": "Real questions from owners, buyers and tenants about KLCC area properties.",
-		"onlineListingTitle": "Online listings & marketing approach | RegalProp",
-		"onlineListingDescription": "How we present and position your unit across portals and in-house channels.",
-		"recruitmentTitle": "Recruitment for KLCC-focused agents | RegalProp",
-		"recruitmentDescription": "Work with a small, focused team specialising in KLCC, TRX and Pavilion area projects.",
-		"authTitle": "Login / register | RegalProp",
-		"authDescription": "Create an account to save units, track viewings and receive curated updates.",
-		"savedTitle": "Saved properties | RegalProp",
-		"savedDescription": "Units you have shortlisted across Star Residences KLCC, TRX, Pavilion and other key projects.",
-		"transactedTitle": "Transacted properties | RegalProp",
-		"transactedDescription": "Sample of past transactions in our focus area to help you understand realistic pricing and demand."
+		"homeTitle": "RegalProp | KLCC 吉隆坡市中心高端物業",
+		"homeDescription": "KLCC / TRX / Pavilion 核心區高端物業買賣及租賃。Star Residences KLCC 專家。",
+		"propertiesTitle": "KLCC 物業租售 | RegalProp",
+		"propertiesDescription": "嚴選 KLCC / TRX / Pavilion 周邊 3–5 公里內的高價值物業，滿足自住及投資需求。",
+		"agentsTitle": "地產經紀及 Star Residences 專家 | RegalProp",
+		"agentsDescription": "聯絡我們的專業團隊，深耕 Star Residences KLCC 及其他優質地標項目。",
+		"aboutTitle": "關於 RegalProp | KLCC 專業地產代理",
+		"aboutDescription": "RegalProp 專注於 KLCC、TRX 及 Pavilion 周邊的高端物業，提供一站式專業服務。",
+		"contactTitle": "聯絡 RegalProp",
+		"contactDescription": "聯絡我們的團隊，諮詢 KLCC 區物業買賣、租賃及託管營運服務。",
+		"newsTitle": "物業新聞及動態 | RegalProp",
+		"newsDescription": "掌握 KLCC / TRX / Pavilion 區域樓市動向、新盤發布及最新政策。",
+		"eventsTitle": "活動及說明會 | RegalProp",
+		"eventsDescription": "由 RegalProp 主辦的 KLCC 區項目分享會、預演及投資說明會。",
+		"mm2hTitle": "MM2H 及長期居留物業規劃 | RegalProp",
+		"mm2hDescription": "了解 KLCC / TRX / Pavilion 區物業如何配合您的馬來西亞第二家園 (MM2H) 或長居計劃。",
+		"educationTitle": "KLCC 周邊教育及國際學校 | RegalProp",
+		"educationDescription": "涵蓋 KLCC、TRX、Pavilion 及 Damansara Heights 周邊的學校分佈及選校建議。",
+		"faqTitle": "常見問題 | RegalProp",
+		"faqDescription": "集合業主、買家及租客對 KLCC 區物業的真實查詢及解答。",
+		"onlineListingTitle": "網上放盤及營銷方式 | RegalProp",
+		"onlineListingDescription": "了解我們如何透過各大平台及自有渠道提升您的物業曝光率。",
+		"recruitmentTitle": "KLCC 區經紀招聘 | RegalProp",
+		"recruitmentDescription": "加入專注於 KLCC、TRX 及 Pavilion 區項目的精銳團隊。",
+		"authTitle": "登入 / 註冊 | RegalProp",
+		"authDescription": "建立帳戶以收藏心水單位、追蹤睇樓紀錄並接收精選資訊。",
+		"savedTitle": "已收藏物業 | RegalProp",
+		"savedDescription": "您收藏的 Star Residences KLCC、TRX、Pavilion 等核心項目單位。",
+		"transactedTitle": "成交紀錄 | RegalProp",
+		"transactedDescription": "參考核心區域的過往成交樣本，助您掌握真實市價及需求。"
 	},
 	"footer": {
-		"tagline": "Focusing on high-value properties within 3–5km of KLCC / TRX / Pavilion."
+		"tagline": "專注於 KLCC / TRX / Pavilion 周邊 3–5 公里內的高價值物業。"
 	},
 	"home": {
-		"heroTitle": "KLCC high-value properties, curated for serious buyers & investors.",
-		"heroSubtitle": "We focus on Star Residences KLCC and surrounding landmark projects with real on-ground data and operation experience.",
-		"viewListings": "View property listings",
-		"meetTeam": "Meet our team"
+		"heroTitle": "吉隆坡市中心高端物業，為資深買家及投資者而設。",
+		"heroSubtitle": "我們深耕 Star Residences KLCC 及周邊地標項目，擁有真實的地盤數據及營運經驗。",
+		"viewListings": "查看物業列表",
+		"meetTeam": "聯絡我們的團隊"
 	},
 	"properties": {
-		"title": "Property listings",
-		"subtitle": "Selected units around KLCC / TRX / Pavilion suitable for own stay, investment and corporate use.",
-		"disclaimer": "Pricing shown in MYR with reference conversion to USD & SGD for illustration only."
+		"title": "物業搜尋",
+		"subtitle": "精選 KLCC / TRX / Pavilion 周邊單位，適合自住、投資及企業用途。",
+		"disclaimer": "標價以馬幣 (MYR) 為準，美元 (USD) 及新幣 (SGD) 匯率換算僅供參考。"
 	},
 	"projects": {
-		"title": "New project launches",
-		"subtitle": "Landed homes, condominiums, commercial shops and industrial factories around KLCC / TRX / Pavilion.",
-		"inCharge": "Person in charge",
-		"team": "Project team members",
-		"relatedUnits": "Selected units in this project",
-		"statusLabel": "Launch status",
-		"phaseLabel": "Phase",
-		"completionLabel": "Expected completion"
+		"title": "全新一手樓盤",
+		"subtitle": "涵蓋 KLCC / TRX / Pavilion 周邊的獨立屋、公寓、商舖及工業廠房。",
+		"inCharge": "項目負責人",
+		"team": "項目團隊成員",
+		"relatedUnits": "該項目精選單位",
+		"statusLabel": "銷售狀態",
+		"phaseLabel": "期數",
+		"completionLabel": "預計落成日期"
 	},
 	"agents": {
-		"title": "Our agents & specialists",
-		"subtitle": "Talk directly to people who actually sell, manage and operate units in these projects every day."
+		"title": "我們的經紀及專家",
+		"subtitle": "直接聯繫每日處理這些項目銷售、管理及營運的前線專業人士。"
 	},
 	"about": {
-		"title": "About RegalProp",
-		"p1": "RegalProp is a boutique real estate advisory and operations team based in Kuala Lumpur, focusing on high-value properties within 3–5km of KLCC, TRX and Pavilion.",
-		"p2": "Beyond traditional buy-and-sell, we also operate hospitality units, manage rentals and provide long-term asset planning for owners and investors.",
+		"title": "關於 RegalProp",
+		"p1": "RegalProp 是一間總部位於吉隆坡的物業顧問及營運團隊，專注於 KLCC、TRX 及 Pavilion 周邊 3–5 公里內的高價值物業。",
+		"p2": "除傳統買賣外，我們亦提供酒店式公寓營運、租賃管理及為投資者提供長期資產規劃服務。",
 		"highlights": [
 			{
-				"title": "KLCC area focus",
-				"text": "Deep specialisation in Star Residences KLCC, Star Suites KLCC and neighbouring landmark projects."
+				"title": "深耕 KLCC 核心區",
+				"text": "深度專研 Star Residences KLCC、Star Suites KLCC 及其周邊地標項目。"
 			},
 			{
-				"title": "Sale to operation",
-				"text": "Involved from project launch, sub-sale transactions, through to daily rental operations and unit maintenance."
+				"title": "由銷售到營運",
+				"text": "由新盤發布、二手買賣，到日常租賃營運及單位維護，我們全程參與。"
 			},
 			{
-				"title": "Investor mindset",
-				"text": "We think in terms of holding power, rental yield, exit strategy and actual demand, not just marketing brochures."
+				"title": "投資者思維",
+				"text": "我們不僅看宣傳手冊，更從持有能力、租金回報、離場策略及真實需求出發進行考量。"
 			}
 		]
 	},
 	"contact": {
-		"title": "Contact us",
-		"subtitle": "Share with us your budget, purpose and timeline. We will recommend a few concrete options instead of sending generic broadcasts.",
+		"title": "聯絡我們",
+		"subtitle": "請提供您的預算、用途及時間表。我們會為您提供具體建議，而非群發一般廣告。",
 		"form": {
-			"name": "Name",
-			"phone": "Phone / WhatsApp",
-			"email": "Email",
-			"message": "How can we help?",
-			"submit": "Send message",
-			"success": "Thank you. Our team will get back to you soon."
+			"name": "姓名",
+			"phone": "電話 / WhatsApp",
+			"email": "電郵",
+			"message": "我們能如何幫到您？",
+			"submit": "發送訊息",
+			"success": "謝謝。我們的團隊會盡快回覆您。"
 		},
-		"officeTitle": "Office & mailing address",
-		"officeAddress": "Kuala Lumpur City Centre area (KLCC). Full address to be used in production.",
-		"phoneLabel": "Phone",
-		"whatsappTitle": "Prefer WhatsApp?",
-		"whatsappDesc": "Click the button below to open WhatsApp with our frontline team. Feel free to send text, voice or property links you want us to review."
+		"officeTitle": "辦公室及通訊地址",
+		"officeAddress": "吉隆坡市中心區域 (KLCC)。詳細地址將在正式上線時顯示。",
+		"phoneLabel": "聯絡電話",
+		"whatsappTitle": "使用 WhatsApp 聯絡？",
+		"whatsappDesc": "點擊下方按鈕直接聯絡我們的客服團隊。歡迎發送文字、語音或您想我們評估的物業連結。"
 	},
 	"news": {
-		"title": "Market news & insights",
-		"subtitle": "Curated updates about KLCC, TRX, Pavilion and Greater Kuala Lumpur property market, filtered for serious buyers and investors.",
-		"comingSoon": "We are preparing articles and updates. Check back again soon."
+		"title": "市場資訊及洞察",
+		"subtitle": "為資深買家及投資者精選 KLCC、TRX、Pavilion 及大吉隆坡樓市的最新動態。",
+		"comingSoon": "文章及資訊正在準備中，請密切留意。"
 	},
 	"events": {
-		"title": "Events & private briefings",
-		"subtitle": "Small-group sharing, project previews and investment briefings hosted by RegalProp and our partners.",
-		"comingSoon": "Upcoming events will be announced here. Contact us if you would like to host a private session."
+		"title": "活動及私享說明會",
+		"subtitle": "由 RegalProp 及其合作夥伴主辦的小型分享會、項目預覽及投資說明會。",
+		"comingSoon": "最新活動將在此公布。如欲預約私人說明會，請與我們聯絡。"
 	},
 	"mm2h": {
-		"title": "MM2H & long-stay planning",
-		"subtitle": "High-level overview of how high-value KLCC area properties can fit into your Malaysia My Second Home (MM2H) or long-stay plan.",
+		"title": "MM2H 及長居規劃",
+		"subtitle": "了解 KLCC 區高端物業如何配合您的馬來西亞第二家園 (MM2H) 或長居計劃。",
 		"sections": {
-			"overviewTitle": "How property fits into MM2H",
-			"overviewBody": "For many MM2H applicants, the main questions are: where to stay, how much to allocate into property, and how flexible the exit is. We focus on KLCC, TRX and Pavilion area projects that match these requirements.",
-			"consultTitle": "Talk to us before you commit",
-			"consultBody": "Instead of rushing into any random project, let us walk you through real numbers on rentability, holding cost and resale demand around KLCC."
+			"overviewTitle": "物業與 MM2H 的關係",
+			"overviewBody": "對 MM2H 申請者而言，核心問題是：住在哪裡、物業投資額度以及退場靈活性。我們專注於符合這些要求的 KLCC、TRX 及 Pavilion 項目。",
+			"consultTitle": "在做決定前先諮詢我們",
+			"consultBody": "與其盲目入市，不如讓我們為您分析 KLCC 周邊關於出租率、持有成本及二手轉售需求的真實數據。"
 		}
 	},
 	"education": {
-		"title": "Education & international schools",
-		"subtitle": "Popular school clusters and how they relate to KLCC, TRX, Pavilion, Damansara Heights and other key neighbourhoods.",
-		"comingSoon": "We are mapping school catchment areas to specific buildings. Share your children's age and syllabus and we can propose a few realistic locations."
+		"title": "教育配套及國際學校",
+		"subtitle": "熱門學校分佈及其與 KLCC、TRX、Pavilion、Damansara Heights 等核心地段的聯繫。",
+		"comingSoon": "我們正在整理各屋苑周邊的學區地圖。請告知您子女的年齡及課程需求，我們將提供具體建議。"
 	},
 	"faq": {
-		"title": "Frequently asked questions",
-		"subtitle": "Honest answers based on actual transactions and daily operation around KLCC area properties.",
-		"itemsIntro": "Below are some common questions buyers and landlords ask us. For anything more detailed, feel free to WhatsApp our team."
+		"title": "常見問題",
+		"subtitle": "基於 KLCC 區物業真實成交及日常營運經驗的坦誠解答。",
+		"itemsIntro": "以下是買家及業主常問的問題。如需更詳細資訊，歡迎透過 WhatsApp 聯絡我們。"
 	},
 	"onlineListing": {
-		"title": "Online listing & marketing",
-		"subtitle": "How we position your unit across major portals and our own channels to attract the right profile of tenants and buyers.",
-		"comingSoon": "This section will show examples of actual listings, photos and copywriting style used by our team."
+		"title": "網上放盤及營銷",
+		"subtitle": "了解我們如何精準定位您的單位，透過各大平台及自有渠道吸引優質租客及買家。",
+		"comingSoon": "此部分將展示我們團隊的實際放盤案例、攝影水準及文案風格。"
 	},
 	"recruitment": {
-		"title": "Recruitment – agents & partners",
-		"subtitle": "We work with a small number of agents who are serious about KLCC area and willing to go deep into a few projects.",
-		"joinTitle": "Who we are looking for",
+		"title": "人才招聘 – 經紀及合作夥伴",
+		"subtitle": "我們正在尋找少數願意深耕 KLCC 區、專注核心項目的專業地產經紀。",
+		"joinTitle": "我們的招募標準",
 		"joinPoints": [
-			"Agents who are willing to specialise in a few buildings instead of everywhere.",
-			"People who are comfortable with on-ground work: viewing, key handling, unit checks.",
-			"Those who want to learn hospitality-style operation for selected units."
+			"願意專注深耕少數地標項目，而非盲目跟進所有地區。",
+			"樂於參與實地工作：睇樓、鑰匙管理、驗樓等。",
+			"渴望學習高端物業的酒店式營運模式。"
 		],
-		"ctaText": "If you feel aligned with this, send us your profile or WhatsApp us for a conversation."
+		"ctaText": "如果您認同我們的理念，請發送您的簡歷或透過 WhatsApp 聯絡我們。"
 	},
 	"auth": {
-		"title": "Login / register",
-		"subtitle": "Create an account to shortlist units, track viewings and receive curated updates instead of mass broadcasts.",
-		"loginTitle": "Existing user",
-		"registerTitle": "New user",
-		"loginButton": "Login",
-		"registerButton": "Create account"
+		"title": "登入 / 註冊",
+		"subtitle": "建立帳戶以收藏單位、追蹤睇樓紀錄並接收精選資訊。",
+		"loginTitle": "現有用戶",
+		"registerTitle": "新用戶註冊",
+		"loginButton": "登入",
+		"registerButton": "建立帳戶"
 	},
 	"saved": {
-		"title": "Saved properties",
-		"subtitle": "Units you have bookmarked across Star Residences KLCC, TRX, Pavilion and other key projects.",
-		"empty": "You have not saved any units yet. Browse the listings and tap the save icon to keep them here."
+		"title": "已收藏物業",
+		"subtitle": "您在 Star Residences KLCC、TRX、Pavilion 及其他核心項目收藏的單位。",
+		"empty": "您尚未收藏任何單位。瀏覽物業列表並點擊收藏圖示即可將其保存在此。"
 	},
 	"transacted": {
-		"title": "Transacted properties",
-		"subtitle": "Sample of past transactions in our focus area to give you a feel of realistic pricing and demand.",
-		"disclaimer": "For privacy reasons, we only show partial details online. Contact us if you want a more detailed discussion on specific buildings."
+		"title": "成交紀錄",
+		"subtitle": "參考我們核心關注區域的過往成交樣本，助您掌握真實市價及需求。",
+		"disclaimer": "出於隱私考量，網上僅展示部分細節。如欲深入討論特定屋苑的情況，請與我們聯絡。"
 	}
 }

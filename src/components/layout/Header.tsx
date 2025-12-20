@@ -16,9 +16,10 @@ import {
 	UnstyledButton,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { modals, openContextModal } from "@mantine/modals";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaWeixin } from "react-icons/fa";
 import {
 	FaFacebook,
@@ -30,29 +31,10 @@ import {
 } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
 import { SiXiaohongshu } from "react-icons/si";
-import { useCurrency } from "@/components/common/CurrencyContext";
-import { useUnitMeasurement } from "@/components/common/UnitMeasurementContext";
-import PreferenceModal from "@/components/popup/Preference";
 import { Link } from "@/i18n/navigation";
-
-const languages = [
-	{ code: "en", label: "English", label_shortform: "EN" },
-	{ code: "ms", label: "Bahasa Melayu", label_shortform: "BM" },
-	{ code: "zh-cn", label: "简体", label_shortform: "简" },
-	{ code: "zh-hk", label: "繁中", label_shortform: "繁" },
-];
-
-const currencyOptions = [
-	{ code: "MYR", label: "RM" },
-	{ code: "USD", label: "USD $" },
-	{ code: "SGD", label: "SGD $" },
-	{ code: "CNY", label: "CNY ¥" },
-];
-
-const measurementUnitOptions = [
-	{ code: "ft2", label: "Square foot | ft²", label_shortform: "ft²" },
-	{ code: "m2", label: "Square meter | m²", label_shortform: "m²" },
-];
+import { languages, measurementUnitOptions } from "@/lib/constant";
+import { currencyOptions } from "@/lib/currency";
+import { usePreferenceStore } from "@/lib/store/usePreferenceStore";
 
 // const NAV_MENU_ITEMS = [
 //   { label: "主頁", icon: "🏠" },
@@ -119,16 +101,23 @@ export const SOCIAL_MEDIA_ICONS = [
 
 export default function Header() {
 	const router = useRouter();
-	const locale = useLocale();
 	const pathname = usePathname() || "/";
-	const { currency, setCurrency } = useCurrency();
-	const { unit } = useUnitMeasurement();
+	const { currency, unit, locale } = usePreferenceStore();
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [drawerOpened, { open: openDrawer, close: closeDrawer }] =
 		useDisclosure(false);
-	const [isPreferenceModalOpen, setIsPreferenceModalOpen] = useState(false);
 
 	const t = useTranslations();
+
+	const selectedLanguages = languages.find(
+		(lang) => lang.code === locale,
+	)?.label;
+	const selectedCurrency = currencyOptions.find(
+		(opt) => opt.code === currency,
+	)?.label;
+	const selectedMeasurementUnit = measurementUnitOptions.find(
+		(opt) => opt.code === unit,
+	).code;
 
 	const NAV_MENU_ITEMS = [
 		{ href: "/", label: t("nav.home") },
@@ -172,24 +161,6 @@ export default function Header() {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-	const handlePreferenceSave = (values: {
-		language: string;
-		currency: string;
-		unit: string;
-	}) => {
-		setIsPreferenceModalOpen(false);
-
-		if (values.currency && values.currency !== currency) {
-			setCurrency(values.currency);
-		}
-
-		if (values.language && values.language !== locale) {
-			const segments = pathname.split("/").filter(Boolean);
-			const rest = segments.slice(1).join("/") || "";
-			router.push(`/${values.language}/${rest}`);
-		}
-	};
-
 	return (
 		<>
 			<Box
@@ -212,7 +183,6 @@ export default function Header() {
 						py={isScrolled ? "xs" : "sm"}
 					>
 						<Group gap="md">
-							{/* Hamburger - Only visible when scrolled */}
 							{isScrolled && (
 								<ActionIcon
 									onClick={openDrawer}
@@ -225,7 +195,6 @@ export default function Header() {
 								</ActionIcon>
 							)}
 
-							{/* Logo */}
 							<Anchor
 								component={Link}
 								href={"/"}
@@ -260,7 +229,7 @@ export default function Header() {
 							</Anchor>
 						</Group>
 
-						<Stack align="flex-end">
+						<Stack align="flex-end" visibleFrom="lg">
 							<Group gap="sm">
 								{SOCIAL_MEDIA_ICONS.map(
 									({ name, Icon, bgColor, iconColor }) => (
@@ -283,20 +252,22 @@ export default function Header() {
 									Login / Register
 								</button>
 								<UnstyledButton
-									onClick={() => setIsPreferenceModalOpen(true)}
+									onClick={() => {
+										openContextModal({
+											modal: "preference",
+											title: (
+												<div className="text-2xl font-semibold">
+													Preferences
+												</div>
+											),
+											centered: true,
+											innerProps: {},
+										});
+									}}
 									style={{ fontSize: "14px", color: "#495057" }}
 								>
-									{
-										languages.find((lang) => lang.code === locale)
-											?.label_shortform
-									}{" "}
-									|{" "}
-									{currencyOptions.find((opt) => opt.code === currency)?.label}{" "}
-									|{" "}
-									{
-										measurementUnitOptions.find((opt) => opt.code === unit)
-											?.label_shortform
-									}
+									{selectedLanguages} | {selectedCurrency} |{" "}
+									{selectedMeasurementUnit}
 								</UnstyledButton>
 							</Group>
 						</Stack>
@@ -317,14 +288,21 @@ export default function Header() {
 				<div className="bg-[#333333]">
 					<Container size="xl" px="md">
 						<Group gap="lg" py="sm">
-							{NAV_MENU_ITEMS.map((item, idx) => (
+							{NAV_MENU_ITEMS.map((item) => (
 								<Anchor
 									key={item.label}
 									component={Link}
 									href={item.href}
 									size="sm"
-									style={{ textDecoration: "none" }}
 									c="white"
+									underline="never"
+									styles={{
+										root: {
+											"&:hover": {
+												backgroundColor: "#b9986a",
+											},
+										},
+									}}
 								>
 									{item.label}
 								</Anchor>
@@ -395,17 +373,6 @@ export default function Header() {
 					</Box>
 				</Stack>
 			</Drawer>
-
-			{/* Preference Modal */}
-			<PreferenceModal
-				isOpen={isPreferenceModalOpen}
-				onClose={() => setIsPreferenceModalOpen(false)}
-				onSave={handlePreferenceSave}
-				languages={languages}
-				currencyOptions={currencyOptions}
-				measurementUnitOptions={measurementUnitOptions}
-				selectedLang={locale}
-			/>
 		</>
 	);
 }

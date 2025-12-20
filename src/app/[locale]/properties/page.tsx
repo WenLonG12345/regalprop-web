@@ -1,3 +1,4 @@
+import { Container } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
 import PropertyCard from "@/components/property/PropertyCard";
 import JsonLd from "@/components/seo/JsonLd";
@@ -30,7 +31,7 @@ export default async function PropertiesPage({ params }: Props) {
 	const listSchema = buildPropertyListSchema(properties, listPath);
 
 	return (
-		<div className="space-y-6">
+		<div>
 			<JsonLd data={[breadcrumb, listSchema]} />
 
 			<section className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
