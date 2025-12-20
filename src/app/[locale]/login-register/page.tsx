@@ -37,13 +37,13 @@ export default async function Page({ params }: Props) {
 				<div className="grid md:grid-cols-2 gap-6">
 					<div className="space-y-2">
 						<h2 className="font-semibold">{t("loginTitle")}</h2>
-						<button className="px-3 py-1.5 rounded-lg border text-xs">
+						<button className="px-3 py-1.5 rounded-lg border text-xs" type="button">
 							{t("loginButton")}
 						</button>
 					</div>
 					<div className="space-y-2">
 						<h2 className="font-semibold">{t("registerTitle")}</h2>
-						<button className="px-3 py-1.5 rounded-lg border text-xs">
+						<button className="px-3 py-1.5 rounded-lg border text-xs" type="button">
 							{t("registerButton")}
 						</button>
 					</div>

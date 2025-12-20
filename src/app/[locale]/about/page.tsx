@@ -39,9 +39,9 @@ export default async function AboutPage({ params }: Props) {
 				<p className="text-slate-700">{t("p1")}</p>
 				<p className="text-slate-700">{t("p2")}</p>
 				<div className="grid md:grid-cols-3 gap-4 pt-2">
-					{highlights.map((item, idx) => (
+					{highlights.map((item) => (
 						<div
-							key={idx}
+							key={item.text}
 							className="border rounded-xl p-4 text-xs text-slate-700 bg-slate-50"
 						>
 							<div className="font-semibold mb-1">{item.title}</div>

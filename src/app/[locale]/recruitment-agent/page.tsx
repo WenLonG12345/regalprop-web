@@ -36,8 +36,8 @@ export default async function Page({ params }: Props) {
 				<div>
 					<h2 className="font-semibold mb-2">{t("joinTitle")}</h2>
 					<ul className="list-disc list-inside space-y-1 text-slate-700">
-						{joinPoints.map((point, idx) => (
-							<li key={idx}>{point}</li>
+						{joinPoints.map((point) => (
+							<li key={point}>{point}</li>
 						))}
 					</ul>
 				</div>
