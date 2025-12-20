@@ -1,8 +1,7 @@
 import {
-	ColorSchemeScript,
-	Container,
-	MantineProvider,
-	mantineHtmlProps,
+  ColorSchemeScript,
+  MantineProvider,
+  mantineHtmlProps,
 } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import { notFound } from "next/navigation";
@@ -20,48 +19,46 @@ import Header from "@/components/layout/Header";
 import { theme } from "@/lib/theme";
 
 export const metadata = {
-	title: "RegalProp | KLCC High Value Properties",
-	description:
-		"KLCC / TRX / Pavilion high value properties for sale and rent. Star Residences KLCC specialist.",
+  title: "RegalProp | KLCC High Value Properties",
+  description:
+    "KLCC / TRX / Pavilion high value properties for sale and rent. Star Residences KLCC specialist.",
 };
 
 type Props = {
-	children: React.ReactNode;
-	params: Promise<{ locale: string }>;
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 };
 
 export default async function LocaleRootLayout({ children, params }: Props) {
-	const { locale } = await params;
-	if (!hasLocale(routing.locales, locale)) {
-		notFound();
-	}
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
-	const messages = await getMessages();
+  const messages = await getMessages();
 
-	setRequestLocale(locale);
+  setRequestLocale(locale);
 
-	const siteSchemas = buildSiteSchemas();
+  const siteSchemas = buildSiteSchemas();
 
-	return (
-		<html lang={locale} {...mantineHtmlProps}>
-			<head>
-				<ColorSchemeScript />
-			</head>
-			<body>
-				<JsonLd data={siteSchemas} />
+  return (
+    <html lang={locale} {...mantineHtmlProps}>
+      <head>
+        <ColorSchemeScript />
+      </head>
+      <body>
+        <JsonLd data={siteSchemas} />
 
-				<NextIntlClientProvider messages={messages}>
-					<MantineProvider theme={theme}>
-						<ModalsProvider modals={modals}>
-							<Header />
-							<Container size="xl" p="md">
-								{children}
-							</Container>
-							<Footer />
-						</ModalsProvider>
-					</MantineProvider>
-				</NextIntlClientProvider>
-			</body>
-		</html>
-	);
+        <NextIntlClientProvider messages={messages}>
+          <MantineProvider theme={theme}>
+            <ModalsProvider modals={modals}>
+              <Header />
+              {children}
+              <Footer />
+            </ModalsProvider>
+          </MantineProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
 }

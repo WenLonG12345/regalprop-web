@@ -31,7 +31,7 @@ export default async function PropertiesPage({ params }: Props) {
 	const listSchema = buildPropertyListSchema(properties, listPath);
 
 	return (
-		<div>
+		<Container size="xl" p="md">
 			<JsonLd data={[breadcrumb, listSchema]} />
 
 			<section className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -47,6 +47,6 @@ export default async function PropertiesPage({ params }: Props) {
 					<PropertyCard key={p.slug} property={p} locale={locale} />
 				))}
 			</section>
-		</div>
+		</Container>
 	);
 }

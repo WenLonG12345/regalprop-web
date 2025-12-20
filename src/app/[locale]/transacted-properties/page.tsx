@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/seo";
+import { Container } from "@mantine/core";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -24,7 +25,7 @@ export default async function Page({ params }: Props) {
   ]);
 
   return (
-    <div className="space-y-6">
+    <Container size="xl" p="md">
       <JsonLd data={breadcrumb} />
 
       <section className="bg-white rounded-xl shadow-sm p-6 space-y-3 text-sm">
@@ -32,6 +33,6 @@ export default async function Page({ params }: Props) {
         <p className="text-slate-700">{t("subtitle")}</p>
         <p className="text-xs text-slate-500">{t("disclaimer")}</p>
       </section>
-    </div>
+    </Container>
   );
 }

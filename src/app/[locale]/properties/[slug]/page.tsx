@@ -7,6 +7,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { agents as allAgents, getPropertyBySlug } from "@/lib/data";
 import { buildBreadcrumbSchema, buildPropertyDetailSchema } from "@/lib/seo";
 import { usePreferenceStore } from "@/lib/store/usePreferenceStore";
+import { Container } from "@mantine/core";
 
 interface Props {
 	params: Promise<{ locale: string; slug: string }>;
@@ -86,7 +87,7 @@ export default async function PropertyDetailsPage({ params }: Props) {
 	const detailSchema = buildPropertyDetailSchema(property, listPath);
 
 	return (
-		<div className="space-y-6">
+		<Container size="xl" p="md">
 			<JsonLd data={[breadcrumb, detailSchema]} />
 
 			<Link

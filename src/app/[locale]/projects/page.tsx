@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import JsonLd from "@/components/seo/JsonLd";
 import { projects } from "@/lib/data";
 import { buildBreadcrumbSchema, buildProjectListSchema } from "@/lib/seo";
+import { Container } from "@mantine/core";
 
 interface Props {
 	params: Promise<{ locale: string }>;
@@ -48,7 +49,7 @@ export default async function ProjectsPage({ params }: Props) {
 					: "View project details →";
 
 	return (
-		<div className="space-y-6">
+		<Container size="xl" p="md">
 			<JsonLd data={[breadcrumb, listSchema]} />
 
 			<section className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -83,6 +84,6 @@ export default async function ProjectsPage({ params }: Props) {
 					);
 				})}
 			</section>
-		</div>
+		</Container>
 	);
 }

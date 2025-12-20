@@ -10,6 +10,7 @@ import {
 	getProjectBySlug,
 } from "@/lib/data";
 import { buildBreadcrumbSchema, buildProjectDetailSchema } from "@/lib/seo";
+import { Container } from "@mantine/core";
 
 interface Props {
 	params: Promise<{ locale: string; slug: string }>;
@@ -87,7 +88,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
 	const detailSchema = buildProjectDetailSchema(project, listPath);
 
 	return (
-		<div className="space-y-6">
+		<Container size="xl" p="md">
 			<JsonLd data={[breadcrumb, detailSchema]} />
 
 			<Link
@@ -151,6 +152,6 @@ export default async function ProjectDetailsPage({ params }: Props) {
 					)}
 				</aside>
 			</section>
-		</div>
+		</Container>
 	);
 }
