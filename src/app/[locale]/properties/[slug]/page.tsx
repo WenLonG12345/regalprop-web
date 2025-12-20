@@ -179,6 +179,6 @@ export default async function PropertyDetailsPage({ params }: Props) {
 					</div>
 				</aside>
 			</section>
-		</div>
+		</Container>
 	);
 }
