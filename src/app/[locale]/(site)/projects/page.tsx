@@ -60,8 +60,6 @@ export default async function ProjectsPage({ params }: Props) {
 
 			<section className="grid gap-4 md:grid-cols-3">
 				{projects.map((p) => {
-					const name = getLocalizedText(p.name, locale);
-					const summary = getLocalizedText(p.summary, locale);
 					return (
 						<article
 							key={p.slug}
@@ -70,11 +68,11 @@ export default async function ProjectsPage({ params }: Props) {
 							<div className="text-xs text-primary font-semibold">
 								{getTypeLabel(p.category)}
 							</div>
-							<h2 className="font-semibold text-slate-900">{name}</h2>
+							<h2 className="font-semibold text-slate-900">name</h2>
 							<div className="text-xs text-slate-500">
-								{getLocalizedText(p.location, locale)}
+								Location
 							</div>
-							<p className="text-xs text-slate-600 line-clamp-3">{summary}</p>
+							<p className="text-xs text-slate-600 line-clamp-3">summary</p>
 							<div className="mt-2">
 								<Link
 									href={`/${locale}/projects/${p.slug}`}

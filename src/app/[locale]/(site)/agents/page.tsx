@@ -37,7 +37,7 @@ export default async function AgentsPage({ params }: Props) {
 
 			<section className="grid gap-4 md:grid-cols-4">
 				{agents.map((agent) => (
-					<AgentCard key={agent.slug} agent={agent} locale={locale} />
+					<AgentCard key={agent.slug} agent={agent} />
 				))}
 			</section>
 		</div>

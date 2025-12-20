@@ -38,7 +38,7 @@ export default async function SiteLayout({ children, params }: Props) {
 
 	return (
 		<div className="min-h-screen flex flex-col bg-slate-50">
-			<Header locale={locale} dict={dict} />
+			<Header />
 			<main className="flex-1 container-main">{children}</main>
 			<Footer />
 		</div>

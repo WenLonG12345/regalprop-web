@@ -9,7 +9,6 @@ import {
 	getAgentBySlug,
 	getProjectBySlug,
 } from "@/lib/data";
-import { getLocalizedText } from "@/lib/i18n";
 import { buildBreadcrumbSchema, buildProjectDetailSchema } from "@/lib/seo";
 
 interface Props {
@@ -28,12 +27,9 @@ export async function generateMetadata({ params }: Props) {
 		};
 	}
 
-	const name = getLocalizedText(project.name, locale);
-
 	return {
-		title: `${name} | ${t("projectsTitle")}`,
-		description:
-			getLocalizedText(project.summary, locale) || t("projectsDescription"),
+		title: `${t("projectsTitle")}`,
+		description:t("projectsDescription"),
 	};
 }
 
@@ -46,11 +42,6 @@ export default async function ProjectDetailsPage({ params }: Props) {
 	if (!project) {
 		notFound();
 	}
-
-	const name = getLocalizedText(project.name, locale);
-	const summary =
-		getLocalizedText(project.summary, locale) ||
-		getLocalizedText(project.summary, "en");
 
 	const backLabel =
 		locale === "zh-cn"
@@ -90,8 +81,8 @@ export default async function ProjectDetailsPage({ params }: Props) {
 	const detailPath = `${listPath}/${project.slug}`;
 	const breadcrumb = buildBreadcrumbSchema([
 		{ name: "Home", path: `/${locale}` },
-		{ name: dict.nav.projects, path: listPath },
-		{ name, path: detailPath },
+		{ name: t("projects"), path: listPath },
+		{ name: t("projectsTitle"), path: detailPath },
 	]);
 	const detailSchema = buildProjectDetailSchema(project, listPath);
 
@@ -108,13 +99,13 @@ export default async function ProjectDetailsPage({ params }: Props) {
 
 			<section className="bg-white rounded-xl shadow-sm p-6 space-y-4 text-sm">
 				<div className="text-xs text-primary font-semibold">
-					{getTypeLabel(dict, project.category)}
+					Label
 				</div>
-				<h1 className="text-xl font-semibold text-slate-900">{name}</h1>
+				<h1 className="text-xl font-semibold text-slate-900">name</h1>
 				<div className="text-xs text-slate-500">
-					{getLocalizedText(project.location, locale)}
+					location
 				</div>
-				<p className="text-slate-700 leading-relaxed">{summary}</p>
+				<p className="text-slate-700 leading-relaxed">summary</p>
 
 				<div className="grid md:grid-cols-3 gap-3 text-xs text-slate-700 pt-2">
 					<div>
