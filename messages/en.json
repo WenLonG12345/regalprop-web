@@ -1,180 +1,196 @@
 {
-	"nav": {
-		"home": "Home",
-		"properties": "Properties",
-		"projects": "Projects",
-		"agents": "Agents",
-		"about": "About us",
-		"contact": "Contact",
-		"news": "News",
-		"events": "Events",
-		"mm2h": "MM2H",
-		"education": "Education",
-		"faq": "FAQ",
-		"onlineListing": "Online listing",
-		"recruitmentAgent": "Recruitment",
-		"loginRegister": "Login / Register",
-		"savedProperties": "Saved properties",
-		"transactedProperties": "Transacted properties"
-	},
-	"meta": {
-		"homeTitle": "RegalProp | KLCC High Value Properties",
-		"homeDescription": "KLCC / TRX / Pavilion high value properties for sale and rent. Star Residences KLCC specialist.",
-		"propertiesTitle": "KLCC Properties for sale & rent | RegalProp",
-		"propertiesDescription": "Curated high-value properties within 3–5km of KLCC / TRX / Pavilion for both own stay and investment.",
-		"agentsTitle": "Real estate agents & Star Residences specialists | RegalProp",
-		"agentsDescription": "Meet our dedicated team specialising in Star Residences KLCC and other prime projects.",
-		"aboutTitle": "About RegalProp | KLCC Specialist Agency",
-		"aboutDescription": "RegalProp focuses on high-value properties around KLCC, TRX and Pavilion with end-to-end services.",
-		"contactTitle": "Contact RegalProp",
-		"contactDescription": "Talk to our team for KLCC area property buying, selling, renting and hospitality operations.",
-		"newsTitle": "Property news & updates | RegalProp",
-		"newsDescription": "Updates on KLCC / TRX / Pavilion area property market, launches and policies.",
-		"eventsTitle": "Events & briefings | RegalProp",
-		"eventsDescription": "Small-group sharing, previews and briefings for KLCC area projects hosted by RegalProp.",
-		"mm2hTitle": "MM2H & long-stay property planning | RegalProp",
-		"mm2hDescription": "How KLCC / TRX / Pavilion area properties can support your Malaysia My Second Home or long-stay plan.",
-		"educationTitle": "Education & international schools near KLCC | RegalProp",
-		"educationDescription": "School clusters and property options around KLCC, TRX, Pavilion and Damansara Heights.",
-		"faqTitle": "Frequently asked questions | RegalProp",
-		"faqDescription": "Real questions from owners, buyers and tenants about KLCC area properties.",
-		"onlineListingTitle": "Online listings & marketing approach | RegalProp",
-		"onlineListingDescription": "How we present and position your unit across portals and in-house channels.",
-		"recruitmentTitle": "Recruitment for KLCC-focused agents | RegalProp",
-		"recruitmentDescription": "Work with a small, focused team specialising in KLCC, TRX and Pavilion area projects.",
-		"authTitle": "Login / register | RegalProp",
-		"authDescription": "Create an account to save units, track viewings and receive curated updates.",
-		"savedTitle": "Saved properties | RegalProp",
-		"savedDescription": "Units you have shortlisted across Star Residences KLCC, TRX, Pavilion and other key projects.",
-		"transactedTitle": "Transacted properties | RegalProp",
-		"transactedDescription": "Sample of past transactions in our focus area to help you understand realistic pricing and demand."
-	},
-	"footer": {
-		"tagline": "Focusing on high-value properties within 3–5km of KLCC / TRX / Pavilion."
-	},
-	"home": {
-		"heroTitle": "KLCC high-value properties, curated for serious buyers & investors.",
-		"heroSubtitle": "We focus on Star Residences KLCC and surrounding landmark projects with real on-ground data and operation experience.",
-		"viewListings": "View property listings",
-		"meetTeam": "Meet our team"
-	},
-	"properties": {
-		"title": "Property listings",
-		"subtitle": "Selected units around KLCC / TRX / Pavilion suitable for own stay, investment and corporate use.",
-		"disclaimer": "Pricing shown in MYR with reference conversion to USD & SGD for illustration only."
-	},
-	"projects": {
-		"title": "New project launches",
-		"subtitle": "Landed homes, condominiums, commercial shops and industrial factories around KLCC / TRX / Pavilion.",
-		"inCharge": "Person in charge",
-		"team": "Project team members",
-		"relatedUnits": "Selected units in this project",
-		"statusLabel": "Launch status",
-		"phaseLabel": "Phase",
-		"completionLabel": "Expected completion"
-	},
-	"agents": {
-		"title": "Our agents & specialists",
-		"subtitle": "Talk directly to people who actually sell, manage and operate units in these projects every day."
-	},
-	"about": {
-		"title": "About RegalProp",
-		"p1": "RegalProp is a boutique real estate advisory and operations team based in Kuala Lumpur, focusing on high-value properties within 3–5km of KLCC, TRX and Pavilion.",
-		"p2": "Beyond traditional buy-and-sell, we also operate hospitality units, manage rentals and provide long-term asset planning for owners and investors.",
-		"highlights": [
-			{
-				"title": "KLCC area focus",
-				"text": "Deep specialisation in Star Residences KLCC, Star Suites KLCC and neighbouring landmark projects."
-			},
-			{
-				"title": "Sale to operation",
-				"text": "Involved from project launch, sub-sale transactions, through to daily rental operations and unit maintenance."
-			},
-			{
-				"title": "Investor mindset",
-				"text": "We think in terms of holding power, rental yield, exit strategy and actual demand, not just marketing brochures."
-			}
-		]
-	},
-	"contact": {
-		"title": "Contact us",
-		"subtitle": "Share with us your budget, purpose and timeline. We will recommend a few concrete options instead of sending generic broadcasts.",
-		"form": {
-			"name": "Name",
-			"phone": "Phone / WhatsApp",
-			"email": "Email",
-			"message": "How can we help?",
-			"submit": "Send message",
-			"success": "Thank you. Our team will get back to you soon."
-		},
-		"officeTitle": "Office & mailing address",
-		"officeAddress": "Kuala Lumpur City Centre area (KLCC). Full address to be used in production.",
-		"phoneLabel": "Phone",
-		"whatsappTitle": "Prefer WhatsApp?",
-		"whatsappDesc": "Click the button below to open WhatsApp with our frontline team. Feel free to send text, voice or property links you want us to review."
-	},
-	"news": {
-		"title": "Market news & insights",
-		"subtitle": "Curated updates about KLCC, TRX, Pavilion and Greater Kuala Lumpur property market, filtered for serious buyers and investors.",
-		"comingSoon": "We are preparing articles and updates. Check back again soon."
-	},
-	"events": {
-		"title": "Events & private briefings",
-		"subtitle": "Small-group sharing, project previews and investment briefings hosted by RegalProp and our partners.",
-		"comingSoon": "Upcoming events will be announced here. Contact us if you would like to host a private session."
-	},
-	"mm2h": {
-		"title": "MM2H & long-stay planning",
-		"subtitle": "High-level overview of how high-value KLCC area properties can fit into your Malaysia My Second Home (MM2H) or long-stay plan.",
-		"sections": {
-			"overviewTitle": "How property fits into MM2H",
-			"overviewBody": "For many MM2H applicants, the main questions are: where to stay, how much to allocate into property, and how flexible the exit is. We focus on KLCC, TRX and Pavilion area projects that match these requirements.",
-			"consultTitle": "Talk to us before you commit",
-			"consultBody": "Instead of rushing into any random project, let us walk you through real numbers on rentability, holding cost and resale demand around KLCC."
-		}
-	},
-	"education": {
-		"title": "Education & international schools",
-		"subtitle": "Popular school clusters and how they relate to KLCC, TRX, Pavilion, Damansara Heights and other key neighbourhoods.",
-		"comingSoon": "We are mapping school catchment areas to specific buildings. Share your children's age and syllabus and we can propose a few realistic locations."
-	},
-	"faq": {
-		"title": "Frequently asked questions",
-		"subtitle": "Honest answers based on actual transactions and daily operation around KLCC area properties.",
-		"itemsIntro": "Below are some common questions buyers and landlords ask us. For anything more detailed, feel free to WhatsApp our team."
-	},
-	"onlineListing": {
-		"title": "Online listing & marketing",
-		"subtitle": "How we position your unit across major portals and our own channels to attract the right profile of tenants and buyers.",
-		"comingSoon": "This section will show examples of actual listings, photos and copywriting style used by our team."
-	},
-	"recruitment": {
-		"title": "Recruitment – agents & partners",
-		"subtitle": "We work with a small number of agents who are serious about KLCC area and willing to go deep into a few projects.",
-		"joinTitle": "Who we are looking for",
-		"joinPoints": [
-			"Agents who are willing to specialise in a few buildings instead of everywhere.",
-			"People who are comfortable with on-ground work: viewing, key handling, unit checks.",
-			"Those who want to learn hospitality-style operation for selected units."
-		],
-		"ctaText": "If you feel aligned with this, send us your profile or WhatsApp us for a conversation."
-	},
-	"auth": {
-		"title": "Login / register",
-		"subtitle": "Create an account to shortlist units, track viewings and receive curated updates instead of mass broadcasts.",
-		"loginTitle": "Existing user",
-		"registerTitle": "New user",
-		"loginButton": "Login",
-		"registerButton": "Create account"
-	},
-	"saved": {
-		"title": "Saved properties",
-		"subtitle": "Units you have bookmarked across Star Residences KLCC, TRX, Pavilion and other key projects.",
-		"empty": "You have not saved any units yet. Browse the listings and tap the save icon to keep them here."
-	},
-	"transacted": {
-		"title": "Transacted properties",
-		"subtitle": "Sample of past transactions in our focus area to give you a feel of realistic pricing and demand.",
-		"disclaimer": "For privacy reasons, we only show partial details online. Contact us if you want a more detailed discussion on specific buildings."
-	}
+  "nav": {
+    "home": "Home",
+    "buy": "Buy",
+    "rent": "Rent",
+    "properties": "Properties",
+    "projects": "Projects",
+    "agents": "Agents",
+    "about": "About us",
+    "contact": "Contact",
+    "news": "News",
+    "events": "Events",
+    "mm2h": "MM2H",
+    "education": "Education",
+    "faq": "FAQ",
+    "onlineListing": "Online listing",
+    "recruitmentAgent": "Recruitment",
+    "loginRegister": "Login / Register",
+    "savedProperties": "Saved properties",
+    "transactedProperties": "Transacted properties"
+  },
+  "meta": {
+    "homeTitle": "RegalProp | KLCC High Value Properties",
+    "homeDescription": "KLCC / TRX / Pavilion high value properties for sale and rent. Star Residences KLCC specialist.",
+    "propertiesTitle": "KLCC Properties for sale & rent | RegalProp",
+    "propertiesDescription": "Curated high-value properties within 3–5km of KLCC / TRX / Pavilion for both own stay and investment.",
+    "agentsTitle": "Real estate agents & Star Residences specialists | RegalProp",
+    "agentsDescription": "Meet our dedicated team specialising in Star Residences KLCC and other prime projects.",
+    "aboutTitle": "About RegalProp | KLCC Specialist Agency",
+    "aboutDescription": "RegalProp focuses on high-value properties around KLCC, TRX and Pavilion with end-to-end services.",
+    "contactTitle": "Contact RegalProp",
+    "contactDescription": "Talk to our team for KLCC area property buying, selling, renting and hospitality operations.",
+    "newsTitle": "Property news & updates | RegalProp",
+    "newsDescription": "Updates on KLCC / TRX / Pavilion area property market, launches and policies.",
+    "eventsTitle": "Events & briefings | RegalProp",
+    "eventsDescription": "Small-group sharing, previews and briefings for KLCC area projects hosted by RegalProp.",
+    "mm2hTitle": "MM2H & long-stay property planning | RegalProp",
+    "mm2hDescription": "How KLCC / TRX / Pavilion area properties can support your Malaysia My Second Home or long-stay plan.",
+    "educationTitle": "Education & international schools near KLCC | RegalProp",
+    "educationDescription": "School clusters and property options around KLCC, TRX, Pavilion and Damansara Heights.",
+    "faqTitle": "Frequently asked questions | RegalProp",
+    "faqDescription": "Real questions from owners, buyers and tenants about KLCC area properties.",
+    "onlineListingTitle": "Online listings & marketing approach | RegalProp",
+    "onlineListingDescription": "How we present and position your unit across portals and in-house channels.",
+    "recruitmentTitle": "Recruitment for KLCC-focused agents | RegalProp",
+    "recruitmentDescription": "Work with a small, focused team specialising in KLCC, TRX and Pavilion area projects.",
+    "authTitle": "Login / register | RegalProp",
+    "authDescription": "Create an account to save units, track viewings and receive curated updates.",
+    "savedTitle": "Saved properties | RegalProp",
+    "savedDescription": "Units you have shortlisted across Star Residences KLCC, TRX, Pavilion and other key projects.",
+    "transactedTitle": "Transacted properties | RegalProp",
+    "transactedDescription": "Sample of past transactions in our focus area to help you understand realistic pricing and demand."
+  },
+  "footer": {
+    "tagline": "Focusing on high-value properties within 3–5km of KLCC / TRX / Pavilion."
+  },
+  "home": {
+    "heroTitle": "KLCC high-value properties, curated for serious buyers & investors.",
+    "heroSubtitle": "We focus on Star Residences KLCC and surrounding landmark projects with real on-ground data and operation experience.",
+    "viewListings": "View property listings",
+    "meetTeam": "Meet our team"
+  },
+  "properties": {
+    "title": "Property listings",
+    "subtitle": "Selected units around KLCC / TRX / Pavilion suitable for own stay, investment and corporate use.",
+    "disclaimer": "Pricing shown in MYR with reference conversion to USD & SGD for illustration only."
+  },
+  "buy": {
+    "title": "Properties for sale",
+    "subtitle": "Curated high-value properties within 3–5km of KLCC / TRX / Pavilion for both own stay and investment."
+  },
+  "rent": {
+    "title": "Properties for rent",
+    "subtitle": "Handpicked rental units around KLCC / TRX / Pavilion for short-term stay, long-term lease and corporate use."
+  },
+  "projects": {
+    "title": "New project launches",
+    "subtitle": "Landed homes, condominiums, commercial shops and industrial factories around KLCC / TRX / Pavilion.",
+    "inCharge": "Person in charge",
+    "team": "Project team members",
+    "relatedUnits": "Selected units in this project",
+    "statusLabel": "Launch status",
+    "phaseLabel": "Phase",
+    "completionLabel": "Expected completion"
+  },
+  "agents": {
+    "title": "Our agents & specialists",
+    "subtitle": "Talk directly to people who actually sell, manage and operate units in these projects every day."
+  },
+  "about": {
+    "title": "About RegalProp",
+    "p1": "RegalProp is a boutique real estate advisory and operations team based in Kuala Lumpur, focusing on high-value properties within 3–5km of KLCC, TRX and Pavilion.",
+    "p2": "Beyond traditional buy-and-sell, we also operate hospitality units, manage rentals and provide long-term asset planning for owners and investors.",
+    "highlights": [
+      {
+        "title": "KLCC area focus",
+        "text": "Deep specialisation in Star Residences KLCC, Star Suites KLCC and neighbouring landmark projects."
+      },
+      {
+        "title": "Sale to operation",
+        "text": "Involved from project launch, sub-sale transactions, through to daily rental operations and unit maintenance."
+      },
+      {
+        "title": "Investor mindset",
+        "text": "We think in terms of holding power, rental yield, exit strategy and actual demand, not just marketing brochures."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Share with us your budget, purpose and timeline. We will recommend a few concrete options instead of sending generic broadcasts.",
+    "form": {
+      "name": "Name",
+      "phone": "Phone / WhatsApp",
+      "email": "Email",
+      "message": "How can we help?",
+      "submit": "Send message",
+      "success": "Thank you. Our team will get back to you soon."
+    },
+    "officeTitle": "Office & mailing address",
+    "officeAddress": "Kuala Lumpur City Centre area (KLCC). Full address to be used in production.",
+    "phoneLabel": "Phone",
+    "whatsappTitle": "Prefer WhatsApp?",
+    "whatsappDesc": "Click the button below to open WhatsApp with our frontline team. Feel free to send text, voice or property links you want us to review."
+  },
+  "news": {
+    "title": "Market news & insights",
+    "subtitle": "Curated updates about KLCC, TRX, Pavilion and Greater Kuala Lumpur property market, filtered for serious buyers and investors.",
+    "comingSoon": "We are preparing articles and updates. Check back again soon."
+  },
+  "events": {
+    "title": "Events & private briefings",
+    "subtitle": "Small-group sharing, project previews and investment briefings hosted by RegalProp and our partners.",
+    "comingSoon": "Upcoming events will be announced here. Contact us if you would like to host a private session."
+  },
+  "mm2h": {
+    "title": "MM2H & long-stay planning",
+    "subtitle": "High-level overview of how high-value KLCC area properties can fit into your Malaysia My Second Home (MM2H) or long-stay plan.",
+    "sections": {
+      "overviewTitle": "How property fits into MM2H",
+      "overviewBody": "For many MM2H applicants, the main questions are: where to stay, how much to allocate into property, and how flexible the exit is. We focus on KLCC, TRX and Pavilion area projects that match these requirements.",
+      "consultTitle": "Talk to us before you commit",
+      "consultBody": "Instead of rushing into any random project, let us walk you through real numbers on rentability, holding cost and resale demand around KLCC."
+    }
+  },
+  "education": {
+    "title": "Education & international schools",
+    "subtitle": "Popular school clusters and how they relate to KLCC, TRX, Pavilion, Damansara Heights and other key neighbourhoods.",
+    "comingSoon": "We are mapping school catchment areas to specific buildings. Share your children's age and syllabus and we can propose a few realistic locations."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Honest answers based on actual transactions and daily operation around KLCC area properties.",
+    "itemsIntro": "Below are some common questions buyers and landlords ask us. For anything more detailed, feel free to WhatsApp our team."
+  },
+  "onlineListing": {
+    "title": "Online listing & marketing",
+    "subtitle": "How we position your unit across major portals and our own channels to attract the right profile of tenants and buyers.",
+    "comingSoon": "This section will show examples of actual listings, photos and copywriting style used by our team."
+  },
+  "recruitment": {
+    "title": "Recruitment – agents & partners",
+    "subtitle": "We work with a small number of agents who are serious about KLCC area and willing to go deep into a few projects.",
+    "joinTitle": "Who we are looking for",
+    "joinPoints": [
+      "Agents who are willing to specialise in a few buildings instead of everywhere.",
+      "People who are comfortable with on-ground work: viewing, key handling, unit checks.",
+      "Those who want to learn hospitality-style operation for selected units."
+    ],
+    "ctaText": "If you feel aligned with this, send us your profile or WhatsApp us for a conversation."
+  },
+  "auth": {
+    "title": "Login / register",
+    "subtitle": "Create an account to shortlist units, track viewings and receive curated updates instead of mass broadcasts.",
+    "loginTitle": "Existing user",
+    "registerTitle": "New user",
+    "loginButton": "Login",
+    "registerButton": "Create account"
+  },
+  "saved": {
+    "title": "Saved properties",
+    "subtitle": "Units you have bookmarked across Star Residences KLCC, TRX, Pavilion and other key projects.",
+    "empty": "You have not saved any units yet. Browse the listings and tap the save icon to keep them here."
+  },
+  "transacted": {
+    "title": "Transacted properties",
+    "subtitle": "Sample of past transactions in our focus area to give you a feel of realistic pricing and demand.",
+    "disclaimer": "For privacy reasons, we only show partial details online. Contact us if you want a more detailed discussion on specific buildings."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Unfortunately, this is only a 404 page. You may have mistyped the address, or the page has been moved to another URL.",
+    "goBack": "Take me back",
+    "goHome": "Go to home page"
+  }
 }

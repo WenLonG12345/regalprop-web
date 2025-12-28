@@ -1,18 +1,8 @@
-/** biome-ignore-all lint/suspicious/noShadowRestrictedNames: no error */
-"use client";
+import { routing } from "@/i18n/routing";
+import { redirect } from "next/navigation";
 
-import Error from "next/error";
-
-// This page renders when a route like `/unknown.txt` is requested.
-// In this case, the layout at `app/[locale]/layout.tsx` receives
-// an invalid value as the `[locale]` param and calls `notFound()`.
-
-export default function GlobalNotFound() {
-	return (
-		<html lang="en">
-			<body>
-				<Error statusCode={404} />
-			</body>
-		</html>
-	);
+export default function RootNotFound() {
+  // If no locale is present, redirect to the default locale's 404 path
+  // This ensures the user stays on a page that can return a 404 status
+  redirect(`/${routing.defaultLocale}/404`);
 }

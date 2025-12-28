@@ -11,15 +11,6 @@ export default function PropertyCard({ property, locale }: any) {
 	const t = useTranslations();
 	const priceLine = formatPriceLine(property.priceMyr, currency);
 
-	const viewLabel =
-		locale === "zh-cn"
-			? "查看详情"
-			: locale === "zh-hk"
-				? "查看詳情"
-				: locale === "ms"
-					? "Lihat butiran"
-					: "View details";
-
 	return (
 		<article className="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col">
 			<Link
@@ -64,7 +55,7 @@ export default function PropertyCard({ property, locale }: any) {
 						href={`/${locale}/properties/${property.slug}`}
 						className="text-primary font-semibold hover:underline shrink-0 ml-2"
 					>
-						{viewLabel} →
+						{t("properties.viewDetails")} →
 					</Link>
 				</div>
 			</div>
