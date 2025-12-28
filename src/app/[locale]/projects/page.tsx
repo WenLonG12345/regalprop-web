@@ -1,9 +1,9 @@
+import { Container } from "@mantine/core";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import JsonLd from "@/components/seo/JsonLd";
 import { projects } from "@/lib/data";
 import { buildBreadcrumbSchema, buildProjectListSchema } from "@/lib/seo";
-import { Container } from "@mantine/core";
 
 interface Props {
 	params: Promise<{ locale: string }>;

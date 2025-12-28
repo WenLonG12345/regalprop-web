@@ -1,3 +1,4 @@
+import { Container } from "@mantine/core";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
@@ -10,7 +11,6 @@ import {
 	getProjectBySlug,
 } from "@/lib/data";
 import { buildBreadcrumbSchema, buildProjectDetailSchema } from "@/lib/seo";
-import { Container } from "@mantine/core";
 
 interface Props {
 	params: Promise<{ locale: string; slug: string }>;

@@ -1,3 +1,4 @@
+import { Container } from "@mantine/core";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
@@ -7,7 +8,6 @@ import JsonLd from "@/components/seo/JsonLd";
 import { agents as allAgents, getPropertyBySlug } from "@/lib/data";
 import { buildBreadcrumbSchema, buildPropertyDetailSchema } from "@/lib/seo";
 import { usePreferenceStore } from "@/lib/store/usePreferenceStore";
-import { Container } from "@mantine/core";
 
 interface Props {
 	params: Promise<{ locale: string; slug: string }>;

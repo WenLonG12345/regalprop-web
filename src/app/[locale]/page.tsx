@@ -1,112 +1,112 @@
 "use client";
 
 import {
-  Anchor,
-  Badge,
-  Box,
-  Button,
-  Card,
-  Container,
-  Grid,
-  Group,
-  Select,
-  Stack,
-  Tabs,
-  Text,
-  TextInput,
-  Title,
+	Anchor,
+	Badge,
+	Box,
+	Button,
+	Card,
+	Container,
+	Grid,
+	Group,
+	Select,
+	Stack,
+	Tabs,
+	Text,
+	TextInput,
+	Title,
 } from "@mantine/core";
 import {
-  Award,
-  Building2,
-  DollarSign,
-  Home,
-  MapPin,
-  Search,
-  TrendingUp,
-  Users,
+	Award,
+	Building2,
+	DollarSign,
+	Home,
+	MapPin,
+	Search,
+	TrendingUp,
+	Users,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import HeroSection from "@/components/home/HeroSection";
-import Image from "next/image";
-import NewLaunchSection from "@/components/home/NewLaunchSection";
 import HotPickSection from "@/components/home/HotPickSection";
+import NewLaunchSection from "@/components/home/NewLaunchSection";
 
 export default function HomePage() {
-  const t = useTranslations();
+	const t = useTranslations();
 
-  const features = [
-    {
-      icon: Building2,
-      title: "Premium Properties",
-      description: "KLCC / TRX / Pavilion high-value properties",
-    },
-    {
-      icon: TrendingUp,
-      title: "Market Insights",
-      description: "Real-time market data and trends",
-    },
-    {
-      icon: Users,
-      title: "Expert Agents",
-      description: "Specialist team with local knowledge",
-    },
-    {
-      icon: Award,
-      title: "Trusted Service",
-      description: "End-to-end property solutions",
-    },
-  ];
+	const features = [
+		{
+			icon: Building2,
+			title: "Premium Properties",
+			description: "KLCC / TRX / Pavilion high-value properties",
+		},
+		{
+			icon: TrendingUp,
+			title: "Market Insights",
+			description: "Real-time market data and trends",
+		},
+		{
+			icon: Users,
+			title: "Expert Agents",
+			description: "Specialist team with local knowledge",
+		},
+		{
+			icon: Award,
+			title: "Trusted Service",
+			description: "End-to-end property solutions",
+		},
+	];
 
-  const quickLinks = [
-    { label: t("nav.properties"), href: `/properties`, icon: Home },
-    { label: t("nav.projects"), href: `/projects`, icon: Building2 },
-    { label: t("nav.agents"), href: `/agents`, icon: Users },
-    {
-      label: t("nav.transactedProperties"),
-      href: `/transacted-properties`,
-      icon: DollarSign,
-    },
-  ];
+	const quickLinks = [
+		{ label: t("nav.properties"), href: `/properties`, icon: Home },
+		{ label: t("nav.projects"), href: `/projects`, icon: Building2 },
+		{ label: t("nav.agents"), href: `/agents`, icon: Users },
+		{
+			label: t("nav.transactedProperties"),
+			href: `/transacted-properties`,
+			icon: DollarSign,
+		},
+	];
 
-  return (
-    <Box>
-      {/* Hero Section with Search */}
-      <Box
-        style={{
-          // background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-          background: "#a0a0a0",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <Container size="xl" py="md">
-          <HeroSection />
-        </Container>
-      </Box>
+	return (
+		<Box>
+			{/* Hero Section with Search */}
+			<Box
+				style={{
+					// background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+					background: "#a0a0a0",
+					position: "relative",
+					overflow: "hidden",
+				}}
+			>
+				<Container size="xl" py="md">
+					<HeroSection />
+				</Container>
+			</Box>
 
-      <Container size="xl" py="md">
-        <div className="flex items-center justify-center">
-          <Image
-            src="/hero_banner.jpg"
-            alt="Hero Banner"
-            width={1000}
-            height={400}
-          />
-        </div>
-      </Container>
+			<Container size="xl" py="md">
+				<div className="flex items-center justify-center">
+					<Image
+						src="/hero_banner.jpg"
+						alt="Hero Banner"
+						width={1000}
+						height={400}
+					/>
+				</div>
+			</Container>
 
-      <Container size="xl" py="md">
-        <NewLaunchSection />
-      </Container>
+			<Container size="xl" py="md">
+				<NewLaunchSection />
+			</Container>
 
-      <Container size="xl" py="md">
-        <HotPickSection />
-      </Container>
+			<Container size="xl" py="md">
+				<HotPickSection />
+			</Container>
 
-      {/* Quick Links Section */}
-      {/* <Container size="xl" py={60}>
+			{/* Quick Links Section */}
+			{/* <Container size="xl" py={60}>
 				<Grid>
 					{quickLinks.map((link) => {
 						const Icon = link.icon;
@@ -159,8 +159,8 @@ export default function HomePage() {
 				</Grid>
 			</Container> */}
 
-      {/* Features Section */}
-      {/* <Box bg="gray.0" py={60}>
+			{/* Features Section */}
+			{/* <Box bg="gray.0" py={60}>
 				<Container size="xl">
 					<Stack gap="xl">
 						<Stack gap="sm" align="center">
@@ -210,8 +210,8 @@ export default function HomePage() {
 				</Container>
 			</Box> */}
 
-      {/* CTA Section */}
-      {/* <Container size="xl" py={80}>
+			{/* CTA Section */}
+			{/* <Container size="xl" py={80}>
 				<Card
 					shadow="xl"
 					radius="lg"
@@ -252,6 +252,6 @@ export default function HomePage() {
 					</Stack>
 				</Card>
 			</Container> */}
-    </Box>
-  );
+		</Box>
+	);
 }

@@ -1,19 +1,19 @@
 "use client";
 
 import {
-  ActionIcon,
-  Anchor,
-  AppShell,
-  Box,
-  Burger,
-  Button,
-  Container,
-  Drawer,
-  Flex,
-  Group,
-  Stack,
-  Text,
-  UnstyledButton,
+	ActionIcon,
+	Anchor,
+	AppShell,
+	Box,
+	Burger,
+	Button,
+	Container,
+	Drawer,
+	Flex,
+	Group,
+	Stack,
+	Text,
+	UnstyledButton,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { modals, openContextModal } from "@mantine/modals";
@@ -22,12 +22,12 @@ import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { FaWeixin } from "react-icons/fa";
 import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaThreads,
-  FaTiktok,
-  FaYoutube,
+	FaFacebook,
+	FaInstagram,
+	FaLinkedin,
+	FaThreads,
+	FaTiktok,
+	FaYoutube,
 } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
 import { SiXiaohongshu } from "react-icons/si";
@@ -37,301 +37,291 @@ import { currencyOptions } from "@/lib/currency";
 import { usePreferenceStore } from "@/lib/store/usePreferenceStore";
 import Logo from "../Logo";
 
-// const NAV_MENU_ITEMS = [
-//   { label: "主頁", icon: "🏠" },
-//   { label: "買盤", icon: "🏘️" },
-//   { label: "租盤", icon: "🔑" },
-//   { label: "屋苑", icon: "🏢" },
-//   { label: "一手新盤", icon: "✨" },
-//   { label: "地區搜樓", icon: "📍" },
-//   { label: "搵代理人", icon: "👤" },
-//   { label: "更多", icon: "⋯" },
-// ];
-
 export const SOCIAL_MEDIA_ICONS = [
-  {
-    name: "Facebook",
-    Icon: FaFacebook,
-    bgColor: "#1877F2",
-    iconColor: "#FFFFFF",
-  },
-  {
-    name: "YouTube",
-    Icon: FaYoutube,
-    bgColor: "#FF0000",
-    iconColor: "#FFFFFF",
-  },
-  {
-    name: "Instagram",
-    Icon: FaInstagram,
-    bgColor:
-      "radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)",
-    iconColor: "#FFFFFF",
-  },
-  {
-    name: "Threads",
-    Icon: FaThreads,
-    bgColor: "#000000",
-    iconColor: "#FFFFFF",
-  },
-  {
-    name: "Xiaohongshu",
-    Icon: SiXiaohongshu,
-    bgColor: "#FE2C55",
-    iconColor: "#FFFFFF",
-  },
-  {
-    name: "WeChat",
-    Icon: FaWeixin,
-    bgColor: "#07C160",
-    iconColor: "#FFFFFF",
-  },
-  {
-    name: "TikTok",
-    Icon: FaTiktok,
-    bgColor: "#000000",
-    iconColor: "#FFFFFF",
-  },
-  {
-    name: "LinkedIn",
-    Icon: FaLinkedin,
-    bgColor: "#0A66C2",
-    iconColor: "#FFFFFF",
-  },
+	{
+		name: "Facebook",
+		Icon: FaFacebook,
+		bgColor: "#1877F2",
+		iconColor: "#FFFFFF",
+	},
+	{
+		name: "YouTube",
+		Icon: FaYoutube,
+		bgColor: "#FF0000",
+		iconColor: "#FFFFFF",
+	},
+	{
+		name: "Instagram",
+		Icon: FaInstagram,
+		bgColor:
+			"radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)",
+		iconColor: "#FFFFFF",
+	},
+	{
+		name: "Threads",
+		Icon: FaThreads,
+		bgColor: "#000000",
+		iconColor: "#FFFFFF",
+	},
+	{
+		name: "Xiaohongshu",
+		Icon: SiXiaohongshu,
+		bgColor: "#FE2C55",
+		iconColor: "#FFFFFF",
+	},
+	{
+		name: "WeChat",
+		Icon: FaWeixin,
+		bgColor: "#07C160",
+		iconColor: "#FFFFFF",
+	},
+	{
+		name: "TikTok",
+		Icon: FaTiktok,
+		bgColor: "#000000",
+		iconColor: "#FFFFFF",
+	},
+	{
+		name: "LinkedIn",
+		Icon: FaLinkedin,
+		bgColor: "#0A66C2",
+		iconColor: "#FFFFFF",
+	},
 ];
 
 export default function Header() {
-  const router = useRouter();
-  const pathname = usePathname() || "/";
-  const { currency, unit, locale } = usePreferenceStore();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [drawerOpened, { open: openDrawer, close: closeDrawer }] =
-    useDisclosure(false);
+	const router = useRouter();
+	const pathname = usePathname() || "/";
+	const { currency, unit, locale } = usePreferenceStore();
+	const [isScrolled, setIsScrolled] = useState(false);
+	const [drawerOpened, { open: openDrawer, close: closeDrawer }] =
+		useDisclosure(false);
 
-  const t = useTranslations();
+	const t = useTranslations();
 
-  const selectedLanguages = languages.find(
-    (lang) => lang.code === locale
-  )?.label;
-  const selectedCurrency = currencyOptions.find(
-    (opt) => opt.code === currency
-  )?.label;
-  const selectedMeasurementUnit = measurementUnitOptions.find(
-    (opt) => opt.code === unit
-  ).code;
+	const selectedLanguages = languages.find(
+		(lang) => lang.code === locale,
+	)?.label;
+	const selectedCurrency = currencyOptions.find(
+		(opt) => opt.code === currency,
+	)?.label;
+	const selectedMeasurementUnit = measurementUnitOptions.find(
+		(opt) => opt.code === unit,
+	).code;
 
-  const NAV_MENU_ITEMS = [
-    { href: "/", label: t("nav.home") },
-    { href: "/properties", label: t("nav.properties") },
-    { href: "/projects", label: t("nav.projects") },
-    { href: "/agents", label: t("nav.agents") },
-    { href: "/about", label: t("nav.about") },
-    { href: "/contact", label: t("nav.contact") },
-    { href: "/news", label: t("nav.news") },
-    { href: "/events", label: t("nav.events") },
-    { href: "/mm2h", label: t("nav.mm2h") },
-    { href: "/education", label: t("nav.education") },
-    { href: "/faq", label: t("nav.faq") },
-    { href: "/online-listing", label: t("nav.onlineListing") },
-    {
-      href: "/recruitment-agent",
-      label: t("nav.recruitmentAgent"),
-    },
-    // {
-    //   href: "/login-register",
-    //   label: t("nav.loginRegister"),
-    // },
-    // {
-    //   href: "/saved-properties",
-    //   label: t("nav.savedProperties"),
-    // },
-    // {
-    //   href: "/transacted-properties",
-    //   label: t("nav.transactedProperties"),
-    // },
-  ];
+	const NAV_MENU_ITEMS = [
+		{ href: "/", label: t("nav.home") },
+		{ href: "/properties", label: t("nav.properties") },
+		{ href: "/projects", label: t("nav.projects") },
+		{ href: "/agents", label: t("nav.agents") },
+		{ href: "/about", label: t("nav.about") },
+		{ href: "/contact", label: t("nav.contact") },
+		{ href: "/news", label: t("nav.news") },
+		{ href: "/events", label: t("nav.events") },
+		{ href: "/mm2h", label: t("nav.mm2h") },
+		{ href: "/education", label: t("nav.education") },
+		{ href: "/faq", label: t("nav.faq") },
+		{ href: "/online-listing", label: t("nav.onlineListing") },
+		{
+			href: "/recruitment-agent",
+			label: t("nav.recruitmentAgent"),
+		},
+		// {
+		//   href: "/login-register",
+		//   label: t("nav.loginRegister"),
+		// },
+		// {
+		//   href: "/saved-properties",
+		//   label: t("nav.savedProperties"),
+		// },
+		// {
+		//   href: "/transacted-properties",
+		//   label: t("nav.transactedProperties"),
+		// },
+	];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (typeof window === "undefined") return;
-      const scrollY = window.scrollY;
+	useEffect(() => {
+		const handleScroll = () => {
+			if (typeof window === "undefined") return;
+			const scrollY = window.scrollY;
 
-      // Add hysteresis: different thresholds for scrolling down vs up
-      if (scrollY > 200 && !isScrolled) {
-        setIsScrolled(true);
-      } else if (scrollY < 150 && isScrolled) {
-        setIsScrolled(false);
-      }
-    };
+			// Add hysteresis: different thresholds for scrolling down vs up
+			if (scrollY > 200 && !isScrolled) {
+				setIsScrolled(true);
+			} else if (scrollY < 150 && isScrolled) {
+				setIsScrolled(false);
+			}
+		};
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isScrolled]);
+		handleScroll();
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [isScrolled]);
 
-  return (
-    <>
-      <Box
-        component="header"
-        style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
-          background: isScrolled ? "rgba(255, 255, 255, 0.50)" : "white",
-          backdropFilter: isScrolled ? "blur(8px)" : "none",
-          borderTop: isScrolled ? "1px solid #e0e0e0" : "5px solid #b9986a",
-          boxShadow: isScrolled ? "0 2px 8px rgba(0,0,0,0.1)" : "none",
-          transition: "all 300ms ease",
-        }}
-      >
-        <Container size="xl" px="md">
-          <Flex
-            justify="space-between"
-            align="center"
-            py={isScrolled ? "xs" : "sm"}
-          >
-            <Group gap="md">
-              {isScrolled && (
-                <ActionIcon
-                  onClick={openDrawer}
-                  variant="subtle"
-                  color="gray"
-                  size="lg"
-                  aria-label="Menu"
-                >
-                  <MdMenu size={20} />
-                </ActionIcon>
-              )}
+	return (
+		<>
+			<Box
+				component="header"
+				style={{
+					position: "sticky",
+					top: 0,
+					zIndex: 100,
+					background: isScrolled ? "rgba(255, 255, 255, 0.50)" : "white",
+					backdropFilter: isScrolled ? "blur(8px)" : "none",
+					borderTop: isScrolled ? "1px solid #e0e0e0" : "5px solid #b9986a",
+					boxShadow: isScrolled ? "0 2px 8px rgba(0,0,0,0.1)" : "none",
+					transition: "all 300ms ease",
+				}}
+			>
+				<Container size="xl" px="md">
+					<Flex
+						justify="space-between"
+						align="center"
+						py={isScrolled ? "xs" : "sm"}
+					>
+						<Group gap="md">
+							{isScrolled && (
+								<ActionIcon
+									onClick={openDrawer}
+									variant="subtle"
+									color="gray"
+									size="lg"
+									aria-label="Menu"
+									visibleFrom="md"
+								>
+									<MdMenu size={20} />
+								</ActionIcon>
+							)}
 
-              <Logo />
-            </Group>
+							<Logo />
+						</Group>
 
-            {!isScrolled && (
-              <Stack align="flex-end" visibleFrom="lg">
-                <Group gap="sm">
-                  {SOCIAL_MEDIA_ICONS.map(
-                    ({ name, Icon, bgColor, iconColor }) => (
-                      <div
-                        key={name}
-                        title={name}
-                        className="flex h-6 w-6 items-center justify-center rounded-full"
-                        style={{ background: bgColor }}
-                      >
-                        <Icon size={14} color={iconColor} />
-                      </div>
-                    )
-                  )}
-                </Group>
-                <Group gap="md">
-                  <button
-                    type="button"
-                    className="hover:bg-primary/70 bg-[#f0f4f5] px-3 py-0.5 rounded text-gray-600 text-xs"
-                  >
-                    Login / Register
-                  </button>
-                  <UnstyledButton
-                    onClick={() => {
-                      openContextModal({
-                        modal: "preference",
-                        title: (
-                          <div className="text-2xl font-semibold">
-                            Preferences
-                          </div>
-                        ),
-                        centered: true,
-                        innerProps: {},
-                      });
-                    }}
-                    style={{ fontSize: "14px", color: "#495057" }}
-                  >
-                    {selectedLanguages} | {selectedCurrency} |{" "}
-                    {selectedMeasurementUnit}
-                  </UnstyledButton>
-                </Group>
-              </Stack>
-            )}
+						{!isScrolled && (
+							<Stack align="flex-end" visibleFrom="lg">
+								<Group gap="sm">
+									{SOCIAL_MEDIA_ICONS.map(
+										({ name, Icon, bgColor, iconColor }) => (
+											<div
+												key={name}
+												title={name}
+												className="flex h-6 w-6 items-center justify-center rounded-full"
+												style={{ background: bgColor }}
+											>
+												<Icon size={14} color={iconColor} />
+											</div>
+										),
+									)}
+								</Group>
+								<Group gap="md">
+									<button
+										type="button"
+										className="hover:bg-primary/70 bg-[#f0f4f5] px-3 py-0.5 rounded text-gray-600 text-xs"
+									>
+										Login / Register
+									</button>
+									<UnstyledButton
+										onClick={() => {
+											openContextModal({
+												modal: "preference",
+												title: (
+													<div className="text-2xl font-semibold">
+														Preferences
+													</div>
+												),
+												centered: true,
+												innerProps: {},
+											});
+										}}
+										style={{ fontSize: "14px", color: "#495057" }}
+									>
+										{selectedLanguages} | {selectedCurrency} |{" "}
+										{selectedMeasurementUnit}
+									</UnstyledButton>
+								</Group>
+							</Stack>
+						)}
 
-            <ActionIcon
-              onClick={openDrawer}
-              variant="subtle"
-              color="gray"
-              size="lg"
-              hiddenFrom="lg"
-              aria-label="Menu"
-            >
-              <MdMenu size={20} />
-            </ActionIcon>
-          </Flex>
-        </Container>
-        {!isScrolled && (
-          <Box bg="#333333" visibleFrom="lg">
-            <Container size="xl" px="md">
-              <Group gap="lg" py="sm">
-                {NAV_MENU_ITEMS.map((item) => (
-                  <Anchor
-                    key={item.label}
-                    component={Link}
-                    href={item.href}
-                    size="sm"
-                    c="white"
-                    underline="never"
-                    styles={{
-                      root: {
-                        "&:hover": {
-                          backgroundColor: "#b9986a",
-                        },
-                      },
-                    }}
-                  >
-                    {item.label}
-                  </Anchor>
-                ))}
-              </Group>
-            </Container>
-          </Box>
-        )}
-      </Box>
+						<ActionIcon
+							onClick={openDrawer}
+							variant="subtle"
+							color="gray"
+							size="lg"
+							hiddenFrom="lg"
+							aria-label="Menu"
+						>
+							<MdMenu size={20} />
+						</ActionIcon>
+					</Flex>
+				</Container>
+				{!isScrolled && (
+					<Box bg="#333333" visibleFrom="lg">
+						<Container size="xl" px="md">
+							<Group gap="lg" py="sm">
+								{NAV_MENU_ITEMS.map((item) => (
+									<Anchor
+										key={item.label}
+										component={Link}
+										href={item.href}
+										size="sm"
+										c="white"
+										underline="never"
+										styles={{
+											root: {
+												"&:hover": {
+													backgroundColor: "#b9986a",
+												},
+											},
+										}}
+									>
+										{item.label}
+									</Anchor>
+								))}
+							</Group>
+						</Container>
+					</Box>
+				)}
+			</Box>
 
-      {/* Mobile Drawer */}
-      <Drawer
-        opened={drawerOpened}
-        onClose={closeDrawer}
-        size="sm"
-        padding="md"
-        title={<Logo />}
-      >
-        <Stack gap="xs">
-          {NAV_MENU_ITEMS.map((item) => (
-            <Anchor
-              key={item.label}
-              component={Link}
-              href={item.href}
-              onClick={closeDrawer}
-              p="sm"
-              style={{
-                textDecoration: "none",
-                borderBottom: "1px solid #f1f1f1",
-                display: "block",
-              }}
-            >
-              {item.label}
-            </Anchor>
-          ))}
+			{/* Mobile Drawer */}
+			<Drawer
+				opened={drawerOpened}
+				onClose={closeDrawer}
+				size="sm"
+				padding="md"
+				title={<Logo />}
+			>
+				<Stack gap="xs">
+					{NAV_MENU_ITEMS.map((item) => (
+						<Anchor
+							key={item.label}
+							component={Link}
+							href={item.href}
+							onClick={closeDrawer}
+							p="sm"
+							style={{
+								textDecoration: "none",
+								borderBottom: "1px solid #f1f1f1",
+								display: "block",
+							}}
+						>
+							{item.label}
+						</Anchor>
+					))}
 
-          <Box mt="xl" p="md" bg="gray.0" style={{ borderRadius: 8 }}>
-            <Text fw={600} size="sm" mb="md">
-              快速連結
-            </Text>
-            <Stack gap="sm">
-              {["中原幣", "分行網絡", "按揭計算機", "市場資訊"].map((link) => (
-                <Anchor key={link} href="#" size="sm" c="gray.7">
-                  {link}
-                </Anchor>
-              ))}
-            </Stack>
-          </Box>
-        </Stack>
-      </Drawer>
-    </>
-  );
+					<Box mt="xl" p="md" bg="gray.0" style={{ borderRadius: 8 }}>
+						<Text fw={600} size="sm" mb="md">
+							快速連結
+						</Text>
+						<Stack gap="sm">
+							{["中原幣", "分行網絡", "按揭計算機", "市場資訊"].map((link) => (
+								<Anchor key={link} href="#" size="sm" c="gray.7">
+									{link}
+								</Anchor>
+							))}
+						</Stack>
+					</Box>
+				</Stack>
+			</Drawer>
+		</>
+	);
 }
