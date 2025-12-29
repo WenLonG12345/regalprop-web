@@ -17,7 +17,9 @@
     "recruitmentAgent": "Recruitment",
     "loginRegister": "Login / Register",
     "savedProperties": "Saved properties",
-    "transactedProperties": "Transacted properties"
+    "transactedProperties": "Transacted properties",
+    "transact": "Transact",
+    "estates": "Estates"
   },
   "meta": {
     "homeTitle": "RegalProp | KLCC High Value Properties",

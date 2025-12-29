@@ -37,7 +37,7 @@ export default function Header() {
   const [drawerOpened, { open: openDrawer, close: closeDrawer }] =
     useDisclosure(false);
 
-    console.log("@test", pathname)
+  console.log("@test", pathname);
 
   const t = useTranslations();
 
@@ -55,21 +55,26 @@ export default function Header() {
     { href: "/", label: t("nav.home") },
     { href: "/buy", label: t("nav.buy") },
     { href: "/rent", label: t("nav.rent") },
+    { href: "/transact", label: t("nav.transact") },
+    { href: "/estates", label: t("nav.estates") },
+    { href: "/projects", label: t("nav.projects") },
+    { href: "/agents", label: t("nav.agents") },
+    { href: "/news", label: t("nav.news") },
+    
     // { href: "/properties", label: t("nav.properties") },
     // { href: "/projects", label: t("nav.projects") },
-    { href: "/agents", label: t("nav.agents") },
-    { href: "/about", label: t("nav.about") },
-    { href: "/contact", label: t("nav.contact") },
-    { href: "/news", label: t("nav.news") },
-    { href: "/events", label: t("nav.events") },
-    { href: "/mm2h", label: t("nav.mm2h") },
-    { href: "/education", label: t("nav.education") },
-    { href: "/faq", label: t("nav.faq") },
-    { href: "/online-listing", label: t("nav.onlineListing") },
-    {
-      href: "/recruitment-agent",
-      label: t("nav.recruitmentAgent"),
-    },
+    // { href: "/about", label: t("nav.about") },
+    // { href: "/contact", label: t("nav.contact") },
+    // { href: "/news", label: t("nav.news") },
+    // { href: "/events", label: t("nav.events") },
+    // { href: "/mm2h", label: t("nav.mm2h") },
+    // { href: "/education", label: t("nav.education") },
+    // { href: "/faq", label: t("nav.faq") },
+    // { href: "/online-listing", label: t("nav.onlineListing") },
+    // {
+    //   href: "/recruitment-agent",
+    //   label: t("nav.recruitmentAgent"),
+    // },
     // {
     //   href: "/login-register",
     //   label: t("nav.loginRegister"),
@@ -208,7 +213,7 @@ export default function Header() {
                       key={item.label}
                       href={item.href}
                       className={clsx(
-                        "text-white hover:bg-primary/70 text-sm font-medium p-2", 
+                        "text-white hover:bg-primary/70 text-sm font-medium p-2",
                         isActive ? " bg-primary/70" : ""
                       )}
                     >

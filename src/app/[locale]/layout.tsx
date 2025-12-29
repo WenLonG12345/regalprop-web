@@ -1,15 +1,15 @@
 import {
-	ColorSchemeScript,
-	MantineProvider,
-	mantineHtmlProps,
+  ColorSchemeScript,
+  MantineProvider,
+  mantineHtmlProps,
 } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import {
-	getMessages,
-	getTranslations,
-	setRequestLocale,
+  getMessages,
+  getTranslations,
+  setRequestLocale,
 } from "next-intl/server";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
@@ -24,54 +24,54 @@ import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 
 type Props = {
-	children: React.ReactNode;
-	params: Promise<{ locale: string }>;
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({ params }: Props) {
-	const { locale } = await params;
-	const t = await getTranslations({ locale, namespace: "meta" });
-	return {
-		title: t("homeTitle"),
-		description: t("homeDescription"),
-		openGraph: {
-			title: t("homeTitle"),
-			description: t("homeDescription"),
-			type: "website",
-		},
-	};
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return {
+    title: t("homeTitle"),
+    description: t("homeDescription"),
+    openGraph: {
+      title: t("homeTitle"),
+      description: t("homeDescription"),
+      type: "website",
+    },
+  };
 }
 
 export default async function LocaleRootLayout({ children, params }: Props) {
-	const { locale } = await params;
-	if (!hasLocale(routing.locales, locale)) {
-		notFound();
-	}
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
-	const messages = await getMessages();
+  const messages = await getMessages();
 
-	setRequestLocale(locale);
+  setRequestLocale(locale);
 
-	const siteSchemas = buildSiteSchemas();
+  const siteSchemas = buildSiteSchemas();
 
-	return (
-		<html lang={locale} {...mantineHtmlProps}>
-			<head>
-				<ColorSchemeScript />
-			</head>
-			<body>
-				<JsonLd data={siteSchemas} />
+  return (
+    <html lang={locale} {...mantineHtmlProps}>
+      <head>
+        <ColorSchemeScript />
+      </head>
+      <body>
+        <JsonLd data={siteSchemas} />
 
-				<NextIntlClientProvider messages={messages}>
-					<MantineProvider theme={theme}>
-						<ModalsProvider modals={modals}>
-							<Header />
-							{children}
-							<Footer />
-						</ModalsProvider>
-					</MantineProvider>
-				</NextIntlClientProvider>
-			</body>
-		</html>
-	);
+        <NextIntlClientProvider messages={messages}>
+          <MantineProvider theme={theme}>
+            <ModalsProvider modals={modals}>
+              <Header />
+              <div className="bg-[#f2f3f7]">{children}</div>
+              <Footer />
+            </ModalsProvider>
+          </MantineProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
 }

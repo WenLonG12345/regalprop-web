@@ -192,10 +192,7 @@ export default function HotPickSection() {
 					{/* Desktop: Sticky Sidebar */}
 					<Grid.Col span={{ base: 12, md: 3 }} visibleFrom="md">
 						<Box
-							style={{
-								position: "sticky",
-								top: 100,
-							}}
+              className="bg-white rounded-md p-2 sticky top-25"
 						>
 							<Stack gap="xs">
 								{categories.map((category) => (
