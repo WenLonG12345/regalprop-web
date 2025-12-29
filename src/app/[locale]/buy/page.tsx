@@ -2,7 +2,7 @@
 
 import { AspectRatio, Button, Container, Image } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
-import { NewPropertyCard } from "@/components/property/NewPropertyCard";
+import { PropertyCard } from "@/components/property/PropertyCard";
 import JsonLd from "@/components/seo/JsonLd";
 import { properties } from "@/lib/data";
 import { buildBreadcrumbSchema, buildPropertyListSchema } from "@/lib/seo";
@@ -41,7 +41,7 @@ export default function BuyPage({ params }: Props) {
       <section className="flex flex-5 flex-col md:flex-row gap-5">
         <div className="flex flex-4 flex-col gap-2">
           {BUY_LISTING.map((p) => (
-            <NewPropertyCard key={p.id} property={p} />
+            <PropertyCard key={p.id} property={p} />
           ))}
         </div>
 

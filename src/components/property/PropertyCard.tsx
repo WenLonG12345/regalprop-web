@@ -1,64 +1,111 @@
-"use client";
+import {
+  Card,
+  Image,
+  Text,
+  Badge,
+  Group,
+  Stack,
+  Box,
+  Grid,
+  ActionIcon,
+} from "@mantine/core";
+import { FaHeart } from "react-icons/fa6";
+import { Property } from "@/types/property";
 
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { formatPriceLine } from "@/lib/currency";
-import { usePreferenceStore } from "@/lib/store/usePreferenceStore";
+export function PropertyCard({ property }: { property: Property }) {
+  return (
+    <Card withBorder radius="md" p={0} className="overflow-hidden">
+      <Grid gutter={0} align="stretch">
+        {/* Left Side: Image (Span 4 of 12) */}
+        <Grid.Col span={{ base: 12, md: 4 }} className="relative">
+          <Image
+            src={property.image}
+            className="h-full object-cover min-h-30"
+            alt={property.title}
+          />
 
-export default function PropertyCard({ property, locale }: any) {
-	const { currency, formatArea } = usePreferenceStore();
+          {/* Overlaid Badges on Image */}
+          <Box className="absolute top-2 left-2 flex flex-col gap-1">
+            {property.tags?.map((tag) => (
+              <Badge
+                key={tag}
+                variant="filled"
+                color={tag === "Exclusive" ? "red" : "cyan"}
+                size="xs"
+              >
+                {tag}
+              </Badge>
+            ))}
+            <Box className="mt-auto bg-yellow-400 text-black px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1">
+              🎙️ AI Deco & Talk
+            </Box>
+          </Box>
+        </Grid.Col>
 
-	const t = useTranslations();
-	const priceLine = formatPriceLine(property.priceMyr, currency);
+        {/* Right Side: Content (Span 8 of 12) */}
+        <Grid.Col span={{ base: 12, md: 9 }} p="md" className="relative">
+          <Group justify="space-between" align="flex-start" wrap="nowrap">
+            <Stack gap={2}>
+              <Text fw={700} size="lg" className="line-clamp-1">
+                {property.title}
+              </Text>
+              <Text size="xs" fw={500}>
+                {property.rooms}
+              </Text>
+              <Text size="xs" c="dimmed">
+                {property.location}
+              </Text>
+              <Text size="xs" c="dimmed">
+                {property.materialDate ? `${property.materialDate} years` : ""}
+              </Text>
+            </Stack>
 
-	return (
-		<article className="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col">
-			<Link
-				href={`/${locale}/properties/${property.slug}`}
-				className="h-36 bg-slate-200 flex items-center justify-center text-xs text-slate-500"
-			>
-				{property.projectName}
-			</Link>
-			<div className="p-4 flex-1 flex flex-col gap-2 text-sm">
-				<div className="text-xs text-primary font-semibold">
-					{property.projectName}
-				</div>
-				<h2 className="font-semibold text-slate-900 line-clamp-2">
-					{t("properties.title")}
-				</h2>
-				<div className="text-xs text-slate-500">{t("properties.subtitle")}</div>
-				<div className="text-xs text-slate-500">
-					{property.bedrooms}{" "}
-					{locale.startsWith("zh") ? "房" : locale === "ms" ? "bilik" : "bed"} ·{" "}
-					{property.bathrooms}{" "}
-					{locale.startsWith("zh")
-						? "卫"
-						: locale === "ms"
-							? "bilik air"
-							: "bath"}{" "}
-					· {property.builtUp && <span>{formatArea(property.builtUp)}</span>}
-				</div>
-				<div className="mt-1 text-xs font-semibold text-primary">
-					{priceLine}
-				</div>
-				<div className="mt-3 flex items-center justify-between text-xs">
-					<span className="text-slate-500">
-						{locale === "zh-cn"
-							? "想要完整资料与影片，请联系顾问。"
-							: locale === "zh-hk"
-								? "想要完整資料與影片，請聯絡顧問。"
-								: locale === "ms"
-									? "Untuk maklumat penuh dan video, hubungi ejen kami."
-									: "For full details and video, contact our agent."}
-					</span>
-					<Link
-						href={`/${locale}/properties/${property.slug}`}
-						className="text-primary font-semibold hover:underline shrink-0 ml-2"
-					>
-						{t("properties.viewDetails")} →
-					</Link>
-				</div>
-			</div>
-		</article>
-	);
+            <ActionIcon variant="transparent" color="gray.4">
+              <FaHeart size={18} />
+            </ActionIcon>
+          </Group>
+
+          <Group gap="xs" mt="sm">
+            <Badge variant="light" color="orange" size="xs">
+              Rush to sell
+            </Badge>
+            <Badge variant="light" color="gray" size="xs">
+              Directors' Choice
+            </Badge>
+          </Group>
+
+          {/* Area and Price Footer */}
+          <Group justify="space-between" align="flex-end" mt="md">
+            <Stack gap={0}>
+              <Text size="xs" fw={500} c="dimmed">
+                S.A.
+              </Text>
+              <Group gap={4}>
+                <Text fw={700} size="sm">
+                  {property.saleableArea}
+                </Text>
+                <Text size="xs" c="dimmed">
+                  {property.saleableAreaRate}
+                </Text>
+              </Group>
+            </Stack>
+
+            <Stack gap={0} align="flex-end" w="100%">
+              <Text size="xs" c="dimmed">
+                Sell
+              </Text>
+              <Text fw={800} size="xl" color="red.7" className="leading-none">
+                ${property.price}M
+              </Text>
+              <Box className="bg-blue-50 px-2 py-1 rounded mt-1">
+                <Text size="xs" c="blue.9">
+                  Monthly $11,450 • Mortgage Calculation
+                </Text>
+              </Box>
+            </Stack>
+          </Group>
+        </Grid.Col>
+      </Grid>
+    </Card>
+  );
 }

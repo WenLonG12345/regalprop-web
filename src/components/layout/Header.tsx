@@ -60,7 +60,7 @@ export default function Header() {
     { href: "/projects", label: t("nav.projects") },
     { href: "/agents", label: t("nav.agents") },
     { href: "/news", label: t("nav.news") },
-    
+
     // { href: "/properties", label: t("nav.properties") },
     // { href: "/projects", label: t("nav.projects") },
     // { href: "/about", label: t("nav.about") },
@@ -252,19 +252,6 @@ export default function Header() {
               {item.label}
             </Anchor>
           ))}
-
-          <Box mt="xl" p="md" bg="gray.0" style={{ borderRadius: 8 }}>
-            <Text fw={600} size="sm" mb="md">
-              快速連結
-            </Text>
-            <Stack gap="sm">
-              {["中原幣", "分行網絡", "按揭計算機", "市場資訊"].map((link) => (
-                <Anchor key={link} href="#" size="sm" c="gray.7">
-                  {link}
-                </Anchor>
-              ))}
-            </Stack>
-          </Box>
         </Stack>
       </Drawer>
     </>

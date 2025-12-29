@@ -8,7 +8,7 @@ import { agents } from "@/lib/data";
 import { buildBreadcrumbSchema } from "@/lib/seo";
 import { useTranslations } from "next-intl";
 import { AGENT_LISTING } from "@/data/agent";
-import { NewAgentCard } from "@/components/agent/NewAgentCard";
+import { AgentCard } from "@/components/agent/AgentCard";
 import { useRouter } from "@/i18n/navigation";
 
 interface Props {
@@ -39,7 +39,7 @@ export default function AgentsPage({ params }: Props) {
       <section className="flex flex-5 flex-col md:flex-row gap-5 mt-3">
         <div className="flex flex-4 flex-col gap-2">
           {AGENT_LISTING?.map((agent) => (
-            <NewAgentCard
+            <AgentCard
               key={agent.id}
               agent={agent}
               onCardClick={() => {
