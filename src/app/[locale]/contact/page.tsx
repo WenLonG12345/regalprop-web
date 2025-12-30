@@ -8,8 +8,7 @@ interface Props {
 	params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params }: Props) {
-	const { locale } = await params;
+export async function generateMetadata() {
 	const t = await getTranslations("meta");
 	return {
 		title: t("contactTitle"),

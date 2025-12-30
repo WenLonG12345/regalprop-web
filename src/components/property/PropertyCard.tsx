@@ -1,111 +1,122 @@
 import {
-  Card,
-  Image,
-  Text,
-  Badge,
-  Group,
-  Stack,
-  Box,
-  Grid,
-  ActionIcon,
+	ActionIcon,
+	Badge,
+	Box,
+	Card,
+	Grid,
+	Group,
+	Image,
+	Stack,
+	Text,
 } from "@mantine/core";
 import { FaHeart } from "react-icons/fa6";
-import { Property } from "@/types/property";
+import type { Property } from "@/types/property";
 
-export function PropertyCard({ property }: { property: Property }) {
-  return (
-    <Card withBorder radius="md" p={0} className="overflow-hidden">
-      <Grid gutter={0} align="stretch">
-        {/* Left Side: Image (Span 4 of 12) */}
-        <Grid.Col span={{ base: 12, md: 4 }} className="relative">
-          <Image
-            src={property.image}
-            className="h-full object-cover min-h-30"
-            alt={property.title}
-          />
+interface PropertyCardProps {
+	property: Property;
+	onCardClick?: (property: Property) => void;
+}
 
-          {/* Overlaid Badges on Image */}
-          <Box className="absolute top-2 left-2 flex flex-col gap-1">
-            {property.tags?.map((tag) => (
-              <Badge
-                key={tag}
-                variant="filled"
-                color={tag === "Exclusive" ? "red" : "cyan"}
-                size="xs"
-              >
-                {tag}
-              </Badge>
-            ))}
-            <Box className="mt-auto bg-yellow-400 text-black px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1">
-              🎙️ AI Deco & Talk
-            </Box>
-          </Box>
-        </Grid.Col>
+export function PropertyCard({ property, onCardClick }: PropertyCardProps) {
+	return (
+		<Card
+			withBorder
+			radius="md"
+			p={0}
+			className="overflow-hidden"
+			onClick={() => onCardClick?.(property)}
+		>
+			<Grid gutter={0} align="stretch">
+				{/* Left Side: Image (Span 4 of 12) */}
+				<Grid.Col span={4} className="relative">
+					<Image
+						src={property.image}
+						className="h-full object-cover min-h-30"
+						alt={property.title}
+					/>
 
-        {/* Right Side: Content (Span 8 of 12) */}
-        <Grid.Col span={{ base: 12, md: 9 }} p="md" className="relative">
-          <Group justify="space-between" align="flex-start" wrap="nowrap">
-            <Stack gap={2}>
-              <Text fw={700} size="lg" className="line-clamp-1">
-                {property.title}
-              </Text>
-              <Text size="xs" fw={500}>
-                {property.rooms}
-              </Text>
-              <Text size="xs" c="dimmed">
-                {property.location}
-              </Text>
-              <Text size="xs" c="dimmed">
-                {property.materialDate ? `${property.materialDate} years` : ""}
-              </Text>
-            </Stack>
+					{/* Overlaid Badges on Image */}
+					<Box className="absolute top-2 left-2 flex flex-col gap-1">
+						{property.tags?.map((tag) => (
+							<Badge
+								key={tag}
+								variant="filled"
+								color={tag === "Exclusive" ? "red" : "cyan"}
+								size="xs"
+							>
+								{tag}
+							</Badge>
+						))}
+						<Box className="mt-auto bg-yellow-400 text-black px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1">
+							🎙️ AI Deco & Talk
+						</Box>
+					</Box>
+				</Grid.Col>
 
-            <ActionIcon variant="transparent" color="gray.4">
-              <FaHeart size={18} />
-            </ActionIcon>
-          </Group>
+				{/* Right Side: Content (Span 8 of 12) */}
+				<Grid.Col span={8} p="md" className="relative">
+					<Group justify="space-between" align="flex-start" wrap="nowrap">
+						<Stack gap={2}>
+							<Text fw={700} size="lg" className="line-clamp-1">
+								{property.title}
+							</Text>
+							<Text size="xs" fw={500}>
+								{property.rooms}
+							</Text>
+							<Text size="xs" c="dimmed">
+								{property.location}
+							</Text>
+							<Text size="xs" c="dimmed">
+								{property.materialDate ? `${property.materialDate} years` : ""}
+							</Text>
+						</Stack>
 
-          <Group gap="xs" mt="sm">
-            <Badge variant="light" color="orange" size="xs">
-              Rush to sell
-            </Badge>
-            <Badge variant="light" color="gray" size="xs">
-              Directors' Choice
-            </Badge>
-          </Group>
+						<ActionIcon variant="transparent" color="gray.4">
+							<FaHeart size={18} />
+						</ActionIcon>
+					</Group>
 
-          {/* Area and Price Footer */}
-          <Group justify="space-between" align="flex-end" mt="md">
-            <Stack gap={0}>
-              <Text size="xs" fw={500} c="dimmed">
-                S.A.
-              </Text>
-              <Group gap={4}>
-                <Text fw={700} size="sm">
-                  {property.saleableArea}
-                </Text>
-                <Text size="xs" c="dimmed">
-                  {property.saleableAreaRate}
-                </Text>
-              </Group>
-            </Stack>
+					<Group gap="xs" mt="sm">
+						<Badge variant="light" color="orange" size="xs">
+							Rush to sell
+						</Badge>
+						<Badge variant="light" color="gray" size="xs">
+							Directors' Choice
+						</Badge>
+					</Group>
 
-            <Stack gap={0} align="flex-end" w="100%">
-              <Text size="xs" c="dimmed">
-                Sell
-              </Text>
-              <Text fw={800} size="xl" color="red.7" className="leading-none">
-                ${property.price}M
-              </Text>
-              <Box className="bg-blue-50 px-2 py-1 rounded mt-1">
-                <Text size="xs" c="blue.9">
-                  Monthly $11,450 • Mortgage Calculation
-                </Text>
-              </Box>
-            </Stack>
-          </Group>
-        </Grid.Col>
-      </Grid>
-    </Card>
-  );
+					{/* Area and Price Footer */}
+					<Group justify="space-between" align="flex-end" mt="md">
+						<Stack gap={0}>
+							<Text size="xs" fw={500} c="dimmed">
+								S.A.
+							</Text>
+							<Group gap={4}>
+								<Text fw={700} size="sm">
+									{property.saleableArea}
+								</Text>
+								<Text size="xs" c="dimmed">
+									{property.saleableAreaRate}
+								</Text>
+							</Group>
+						</Stack>
+
+						<Stack gap={0} align="flex-end" w="100%">
+							<Text size="xs" c="dimmed">
+								Sell
+							</Text>
+							<Text fw={800} size="xl" color="red.7" className="leading-none">
+								${property.price}M
+							</Text>
+							<Box className="bg-blue-50 px-2 py-1 rounded mt-1">
+								<Text size="xs" c="blue.9">
+									Monthly $11,450 • Mortgage Calculation
+								</Text>
+							</Box>
+						</Stack>
+					</Group>
+				</Grid.Col>
+			</Grid>
+		</Card>
+	);
 }

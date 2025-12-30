@@ -71,52 +71,52 @@ export default function HomePage() {
 	];
 
 	return (
-    <div>
-      <Box
-        style={{
-          // background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-          background: "#a0a0a0",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <Container size="xl" py="md">
-          <HeroSection />
-        </Container>
-      </Box>
+		<div>
+			<Box
+				style={{
+					// background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+					background: "#a0a0a0",
+					position: "relative",
+					overflow: "hidden",
+				}}
+			>
+				<Container size="xl" py="md">
+					<HeroSection />
+				</Container>
+			</Box>
 
-      <Container size="xl" py="md">
-        <div className="flex items-center justify-center">
-          <Image
-            src="/hero_banner.jpg"
-            alt="Hero Banner"
-            width={1000}
-            height={400}
-          />
-        </div>
-      </Container>
+			<Container size="xl" py="md">
+				<div className="flex items-center justify-center">
+					<Image
+						src="/hero_banner.jpg"
+						alt="Hero Banner"
+						width={1000}
+						height={400}
+					/>
+				</div>
+			</Container>
 
-      <Container size="xl" py="md">
-        <NewLaunchSection />
-      </Container>
+			<Container size="xl" py="md">
+				<NewLaunchSection />
+			</Container>
 
-      <Container size="xl" py="md">
-        <HotPickSection />
-      </Container>
+			<Container size="xl" py="md">
+				<HotPickSection />
+			</Container>
 
-      <Container size="xl">
-        <div className="flex items-center justify-center">
-          <Image
-            src="/hero_banner.jpg"
-            alt="Hero Banner"
-            width={1000}
-            height={400}
-          />
-        </div>
-      </Container>
+			<Container size="xl">
+				<div className="flex items-center justify-center">
+					<Image
+						src="/hero_banner.jpg"
+						alt="Hero Banner"
+						width={1000}
+						height={400}
+					/>
+				</div>
+			</Container>
 
-      {/* Quick Links Section */}
-      {/* <Container size="xl" py={60}>
+			{/* Quick Links Section */}
+			{/* <Container size="xl" py={60}>
 				<Grid>
 					{quickLinks.map((link) => {
 						const Icon = link.icon;
@@ -169,8 +169,8 @@ export default function HomePage() {
 				</Grid>
 			</Container> */}
 
-      {/* Features Section */}
-      {/* <Box bg="gray.0" py={60}>
+			{/* Features Section */}
+			{/* <Box bg="gray.0" py={60}>
 				<Container size="xl">
 					<Stack gap="xl">
 						<Stack gap="sm" align="center">
@@ -220,8 +220,8 @@ export default function HomePage() {
 				</Container>
 			</Box> */}
 
-      {/* CTA Section */}
-      {/* <Container size="xl" py={80}>
+			{/* CTA Section */}
+			{/* <Container size="xl" py={80}>
 				<Card
 					shadow="xl"
 					radius="lg"
@@ -262,6 +262,6 @@ export default function HomePage() {
 					</Stack>
 				</Card>
 			</Container> */}
-    </div>
-  );
+		</div>
+	);
 }
