@@ -15,3 +15,37 @@ export interface Property {
 	age?: number; // (New) Building age
 	description?: string; // (New) For SEO descriptions
 }
+
+export interface Project {
+  id: string;
+  title: string;
+  region: string;
+  district: string;
+  image: string;
+
+  // Status Tags
+  statusTags: {
+    label: string;
+    color: string;
+    variant: "filled" | "light" | "outline";
+  }[];
+
+  // Dates
+  estimatedMaterialDate: string;
+  firstSalesDate: string;
+
+  // Price
+  priceLabel: string;
+  priceValue: string;
+  priceSuffix?: string;
+  discountPrice?: string;
+
+  // Detail Page Specifics
+  phase: string;
+  unitCount: number;
+  managementCompany: string;
+  vendor: string;
+  schoolNet: string;
+  blocks: string;
+  hotline: string[];
+}
